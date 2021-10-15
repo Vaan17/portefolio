@@ -1,9 +1,13 @@
 import logo from './logo.svg';
+import { PageContainer } from './styledComponent/styledComponent';
+import Navbar from './navigations/Navbar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <PageContainer>
+        <Navbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,9 +19,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          It's time to make the best portefolio with à working react-app
         </a>
       </header>
+    </PageContainer>
     </div>
   );
 }
