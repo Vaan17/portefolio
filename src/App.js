@@ -1,29 +1,44 @@
-import logo from './logo.svg';
-import { PageContainer } from './styledComponent/styledComponent';
-import Navbar from './navigations/Navbar';
-import './App.css';
+import React, { useState } from 'react'
+import { PageContainer } from './styledComponent/styledComponent'
+import Navbar from './navigations/Navbar'
+import { createBrowserHistory } from 'history'
+import { Router, Switch, Route, Redirect } from 'react-router-dom'
+import './App.css'
+import '../node_modules/moment/dist/locale/fr'
+import Home from './content/Home'
+import Profil from './content/Profil'
+import NumeriskAndMe from './content/NumeriskAndMe'
+import ProfessionalsSituations from './content/ProfessionalsSituations'
 
-function App() {
+const App = () => {
+  const history = createBrowserHistory()
+  const [currentPage, setCurrentPage] = useState("tttt")
+
   return (
-    <div className="App">
+    <Router history={history}>
       <PageContainer>
-        <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          It's time to make the best portefolio with à working react-app
-        </a>
-      </header>
-    </PageContainer>
-    </div>
+        <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/profil">
+              <Profil />
+            </Route>
+            <Route path="/numerisk_and_me">
+              <NumeriskAndMe />
+            </Route>
+            <Route path="/professionals_situations">
+              <ProfessionalsSituations />
+            </Route>
+            <Route path="/annexes">
+              null
+            </Route>
+            {/* When App is started, she display the page with url : /home */}
+            {/* <Redirect to="/home" /> */}
+          </Switch>
+      </PageContainer>
+    </Router>
   );
 }
 

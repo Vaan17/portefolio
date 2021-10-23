@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AppBarMenu = () => {
+const EndBar = () => {
 
     return (
         ''
     )
 }
 
-export default AppBarMenu
+export default EndBar
