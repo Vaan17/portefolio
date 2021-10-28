@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import styled from 'styled-components'
 
 const SAppBar = styled(AppBar)`
-    height: 65px;
+    height: 4em;
     background-color: #999999 !important;
     display: flex;
     justify-content: center;

@@ -5,6 +5,23 @@ export const PageContainer = styled.div`
     height: 100%;
 `
 export const PageContent = styled.div`
-    padding: 1em 2em;
-    height: calc(100vh - 162px) !important;
+    padding: 3em 16em;
+    height: calc(100vh - 14em) !important;
+`
+export const TinyText = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+`
+export const BoldText = styled.div`
+    font-weight: bold;
+`
+export const Title = styled.div`
+    font-size: 28px;
+    font-weight: 600 !important;
+    color: rgb(21, 24, 153);
+`
+export const Spacing = styled.div`
+    padding-bottom: ${(props) => props.spacing};
 `

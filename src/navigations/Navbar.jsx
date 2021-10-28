@@ -9,7 +9,7 @@ import ListItem from '@mui/material/ListItem'
 import { useHistory } from 'react-router-dom'
 
 const SAppBar = styled(AppBar)`
-  height: 65px;
+  height: 4em;
 `
 const SToolbar = styled(Toolbar)`
   display: flex;
@@ -19,7 +19,7 @@ const SListItem = styled(ListItem)`
   width: max-content !important;
   padding: 8px 64px !important;
   &:hover{
-    background-color: rgba(224, 251, 255, .5);
+    background-color: rgba(224, 251, 255, .2);
     transition: background-color .5s, transform .5s;
   }
 `
