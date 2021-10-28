@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { PageContainer } from './styledComponent/styledComponent'
+import React from 'react'
+import { PageContainer, PageContent } from './styledComponent/styledComponent'
 import Navbar from './navigations/Navbar'
+import EndBar from './navigations/EndBar'
 import { createBrowserHistory } from 'history'
 import { Router, Switch, Route, Redirect } from 'react-router-dom'
 import './App.css'
@@ -12,31 +13,33 @@ import ProfessionalsSituations from './content/ProfessionalsSituations'
 
 const App = () => {
   const history = createBrowserHistory()
-  const [currentPage, setCurrentPage] = useState("tttt")
 
   return (
     <Router history={history}>
       <PageContainer>
-        <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
-          <Switch>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/profil">
-              <Profil />
-            </Route>
-            <Route path="/numerisk_and_me">
-              <NumeriskAndMe />
-            </Route>
-            <Route path="/professionals_situations">
-              <ProfessionalsSituations />
-            </Route>
-            <Route path="/annexes">
-              null
-            </Route>
-            {/* When App is started, she display the page with url : /home */}
-            {/* <Redirect to="/home" /> */}
-          </Switch>
+        <Navbar />
+          <PageContent>
+            <Switch>
+              <Route path="/home">
+                <Home />
+              </Route>
+              <Route path="/profil">
+                <Profil />
+              </Route>
+              <Route path="/numerisk_and_me">
+                <NumeriskAndMe />
+              </Route>
+              <Route path="/professionals_situations">
+                <ProfessionalsSituations />
+              </Route>
+              <Route path="/annexes">
+                null
+              </Route>
+              {/* When App is started, she display the page with url : /home */}
+              {/* <Redirect to="/home" /> */}
+            </Switch>
+          </PageContent>
+        <EndBar />
       </PageContainer>
     </Router>
   );

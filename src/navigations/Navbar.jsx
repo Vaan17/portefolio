@@ -7,11 +7,21 @@ import moment from 'moment'
 import styled from 'styled-components'
 import ListItem from '@mui/material/ListItem'
 import { useHistory } from 'react-router-dom'
-import { ListItemText } from '@mui/material'
 
+const SAppBar = styled(AppBar)`
+  height: 65px;
+`
 const SToolbar = styled(Toolbar)`
   display: flex;
   justify-content: space-between;
+`
+const SListItem = styled(ListItem)`
+  width: max-content !important;
+  padding: 8px 64px !important;
+  &:hover{
+    background-color: rgba(224, 251, 255, .5);
+    transition: background-color .5s, transform .5s;
+  }
 `
 const ListContainer = styled.div`
   display: flex;
@@ -28,10 +38,6 @@ const Separator = styled.div`
 `
 const SDiv = styled.div`
   display: flex;
-`
-const SListItem = styled(ListItem)`
-  width: max-content !important;
-  padding: 8px 64px !important;
 `
 
 const Navbar = () => {
@@ -63,7 +69,7 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <SAppBar position="static">
         <SToolbar>
           <img src="https://www.cipecma.com/templates/cipecma/images/logo.png" alt="Logo Cipecma" width="100px" height="55px"/>
           <Header>
@@ -82,7 +88,7 @@ const Navbar = () => {
           </Header>
           {date}
         </SToolbar>
-      </AppBar>
+      </SAppBar>
     </Box>
   )
 }
