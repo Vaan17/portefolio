@@ -47,7 +47,6 @@ const Profil = () => {
                 <Grid item md={4} sm={12}>
                     <GridContent>
                         <Title>Parcours pédagogique et diplômes :​</Title>
-                            <Spacing spacing="1em" />
                         <BoldText>- Collège Albert Camus​</BoldText>
                         <div>17000, La Rochelle.​</div>
                         <div>Diplôme : Brevet des collèges​</div>
@@ -64,7 +63,6 @@ const Profil = () => {
                 <Grid item md={5} sm={12}>
                     <GridContent padding="0 0 0 2em">
                         <Title>Expériences professionnelles :​</Title>
-                            <Spacing spacing="1em" />
                         <BoldText>- 2017 TRIBOFILM, Périgny ​</BoldText>
                         <TinyText>Poste occupé : Stagiaire en observation ( 1semaine )</TinyText>​
                         <BoldText>- 2020 NUMERISK, La Rochelle​</BoldText>
@@ -74,7 +72,6 @@ const Profil = () => {
                 <Grid item md={3} sm={12}>
                     <GridContent>
                         <Title>Compétences :​</Title>
-                            <Spacing spacing="1em"/>
                         <BoldText>Logiciels maîtrisés :</BoldText>
                         <div>Word, OpenOffice, Visual Studio Code, Wamp, GitHub, Ubuntu.​</div>
                             <Spacing spacing="1em"/>

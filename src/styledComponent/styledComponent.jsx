@@ -21,6 +21,8 @@ export const Title = styled.div`
     font-size: 28px;
     font-weight: 600 !important;
     color: rgb(21, 24, 153);
+    width: 100%;
+    padding-bottom: 1em;
 `
 export const Spacing = styled.div`
     padding-bottom: ${(props) => props.spacing};
