@@ -7,6 +7,7 @@ export const PageContainer = styled.div`
 export const PageContent = styled.div`
     padding: 3em 16em;
     height: calc(100vh - 14em) !important;
+    overflow: auto;
 `
 export const TinyText = styled.div`
     display: flex;
@@ -26,4 +27,5 @@ export const Title = styled.div`
 `
 export const Spacing = styled.div`
     padding-bottom: ${(props) => props.spacing};
+    width: 100%;
 `

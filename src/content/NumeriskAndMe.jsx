@@ -47,6 +47,7 @@ const NumeriskAndMe = () => {
                         <div>Site WEB : https://numerisk.fr</div>
                     </GridContent>
                 </Grid>
+                <Spacing spacing="5em" />
                 {/* SECOND PART */}
                 <Title>Mon rôle au sein de l'entreprise </Title>
                 <Grid item md={6} sm={12}>
