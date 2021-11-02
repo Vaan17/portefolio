@@ -79,7 +79,6 @@ const Navbar = () => {
                   <SListItem onClick={() => {history.push(page.path)}}>
                     {page.name}
                   </SListItem>
-                  <Link to={page.path}>{page.path}</Link>
                   {page !== pages[pages.length - 1] && (
                     <Separator />
                   )}

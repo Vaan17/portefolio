@@ -5,7 +5,7 @@ import EndBar from './navigations/EndBar'
 import { createBrowserHistory } from 'history'
 import { BrowserRouter as Router , Switch, Route, Redirect } from 'react-router-dom'
 import './App.css'
-import '../node_modules/moment/dist/locale/fr'
+import 'moment/dist/locale/fr'
 import Home from './content/Home'
 import Profil from './content/Profil'
 import NumeriskAndMe from './content/NumeriskAndMe'
@@ -35,8 +35,8 @@ const App = () => {
               <Route exact path="/annexes">
                 null
               </Route>
-              {/* When App is started, she display the page with url : /home */}
-              {/* <Redirect to="/home" /> */}
+              {/* When App is started, it display the page with url : /home */}
+              <Redirect to="/home" />
             </Switch>
           </PageContent>
         <EndBar />

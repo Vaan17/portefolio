@@ -25,7 +25,6 @@ const Home = () => {
 
     return (
         <>
-        <img src="/melvin-cv.png" height={1000}/>
             <SGridContainer container>
                 <SGrid item md={6} sm={12}>
                     <div>

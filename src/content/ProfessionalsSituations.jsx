@@ -17,16 +17,18 @@ const ProfessionalsSituations = () => {
             <Grid container>
                 <Title>Tableau de sythèse :</Title>
                 <Grid item md={12}>
-                    INSERER TABLEAU DE SYNTHESE MIS A JOUR
+                    <img src="/tableausynthese.PNG" width="100%"/>
                 </Grid>
 
+                    <Spacing spacing="2em" />
 
                 <STitle>Participation à un projet d’évolution d’un SI :​</STitle>
                 <SubTitle>(solution applicative et d’infrastructure portant prioritairement sur le domaine de spécialité du candidat)​</SubTitle>
                 <Grid item md={12}>
-                    IMAGE DES INDICATEURS NUMERISK
+                    <img src="/indicateurnumerisk.PNG" width="100%"/>
                 </Grid>
 
+                    <Spacing spacing="2em" />
 
                 <Title>Elaboration de documents relatifs à la production et à la fourniture de services :​</Title>
                 <Grid item md={6}>
@@ -42,6 +44,7 @@ const ProfessionalsSituations = () => {
                     IMAGE CAHIER DES CHARGES 4
                 </Grid>
 
+                        <Spacing spacing="2em" />
 
                 <Title>Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode :​</Title>
                 <Grid item md={6}>
