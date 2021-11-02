@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import React from 'react'
 import { Grid } from '@mui/material'
 import {TinyText, Spacing} from '../styledComponent/styledComponent'
-
 const SGrid = styled(Grid)`
     display: flex;
     flex-direction: column !important;
@@ -26,6 +25,7 @@ const Home = () => {
 
     return (
         <>
+        <img src="/melvin-cv.png" height={1000}/>
             <SGridContainer container>
                 <SGrid item md={6} sm={12}>
                     <div>

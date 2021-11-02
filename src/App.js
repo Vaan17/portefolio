@@ -3,7 +3,7 @@ import { PageContainer, PageContent } from './styledComponent/styledComponent'
 import Navbar from './navigations/Navbar'
 import EndBar from './navigations/EndBar'
 import { createBrowserHistory } from 'history'
-import { Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router , Switch, Route, Redirect } from 'react-router-dom'
 import './App.css'
 import '../node_modules/moment/dist/locale/fr'
 import Home from './content/Home'
@@ -15,24 +15,24 @@ const App = () => {
   const history = createBrowserHistory()
 
   return (
-    <Router history={history}>
+    <Router  history={history}>
       <PageContainer>
         <Navbar />
           <PageContent>
             <Switch>
-              <Route path="/home">
+              <Route exact path="/home">
                 <Home />
               </Route>
-              <Route path="/profil">
+              <Route exact path="/profil">
                 <Profil />
               </Route>
-              <Route path="/numerisk_and_me">
+              <Route exact path="/numerisk_and_me">
                 <NumeriskAndMe />
               </Route>
-              <Route path="/professionals_situations">
+              <Route exact path="/professionals_situations">
                 <ProfessionalsSituations />
               </Route>
-              <Route path="/annexes">
+              <Route exact path="/annexes">
                 null
               </Route>
               {/* When App is started, she display the page with url : /home */}

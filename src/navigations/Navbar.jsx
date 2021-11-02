@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import moment from 'moment'
 import styled from 'styled-components'
 import ListItem from '@mui/material/ListItem'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const SAppBar = styled(AppBar)`
   height: 4em;
@@ -79,6 +79,7 @@ const Navbar = () => {
                   <SListItem onClick={() => {history.push(page.path)}}>
                     {page.name}
                   </SListItem>
+                  <Link to={page.path}>{page.path}</Link>
                   {page !== pages[pages.length - 1] && (
                     <Separator />
                   )}
