@@ -39,7 +39,7 @@ const Profil = () => {
                 </Grid>
                 <Grid item md={3} sm={12}>
                     <GridContent alignment="flex-end">
-                        <img src="/melvin-cv.png" height="250px" />
+                        <img src="/melvin-cv.png" alt="melvin-cv" height="250px" />
                     </GridContent>
                 </Grid>
             </SGridContainer>

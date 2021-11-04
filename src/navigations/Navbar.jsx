@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import moment from 'moment'
 import styled from 'styled-components'
 import ListItem from '@mui/material/ListItem'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const SAppBar = styled(AppBar)`
   height: 4em;
@@ -60,6 +60,10 @@ const Navbar = () => {
     {
       name: "Situations Professionelles",
       path: "/professionals_situations"
+    },
+    {
+      name: "Approfondissement",
+      path: "/deepening"
     },
     {
       name: "Annexes",

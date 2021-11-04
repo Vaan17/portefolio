@@ -47,7 +47,7 @@ const NumeriskAndMe = () => {
                         <div>1 Rue Alexander Fleming​</div>
                         <div>17000 La Rochelle​</div>
                         <div>Téléphone : 06 33 01 80 38​</div>
-                        <div>Site WEB : <a href="https://numerisk.fr" target="_blank">https://numerisk.fr</a></div>
+                        <div>Site WEB : <a href="https://numerisk.fr" target="_blank" rel="noreferrer">https://numerisk.fr</a></div>
                     </GridContent>
                 </Grid>
                 <Spacing spacing="5em" />
@@ -55,14 +55,14 @@ const NumeriskAndMe = () => {
                 <Title>Mon rôle au sein de l'entreprise </Title>
                 <Grid item md={6} sm={12}>
                     <GridContent>
-                        <img src="/reactjs.jpg" width="80%"/>
+                        <img src="/reactjs.jpg" alt="reactjs-img" width="80%"/>
                         <Spacing spacing="1em" />
                         <div>Bibliothèque JavaScript (front-end)</div>
                     </GridContent>
                 </Grid>
                 <Grid item md={6} sm={12}>
                     <GridContent>
-                        <img src="/rubyonrails.png" width="80%"/>
+                        <img src="/rubyonrails.png" alt="rubyonrails-img" width="80%"/>
                         <Spacing spacing="1em" />
                         <div>Framework Web (back-end)</div>
                     </GridContent>

@@ -10,6 +10,8 @@ import Home from './content/Home'
 import Profil from './content/Profil'
 import NumeriskAndMe from './content/NumeriskAndMe'
 import ProfessionalsSituations from './content/ProfessionalsSituations'
+import Deepening from './content/Deepening'
+import Annexes from './content/Annexes'
 
 const App = () => {
   const history = createBrowserHistory()
@@ -32,8 +34,11 @@ const App = () => {
               <Route exact path="/professionals_situations">
                 <ProfessionalsSituations />
               </Route>
+              <Route exact path="/deepening">
+                <Deepening />
+              </Route>
               <Route exact path="/annexes">
-                null
+                <Annexes />
               </Route>
               {/* When App is started, it display the page with url : /home */}
               <Redirect to="/home" />
