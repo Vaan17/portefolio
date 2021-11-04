@@ -25,6 +25,10 @@ const ProfessionalsSituations = () => {
                 <STitle>Participation à un projet d’évolution d’un SI :​</STitle>
                 <SubTitle>(solution applicative et d’infrastructure portant prioritairement sur le domaine de spécialité du candidat)​</SubTitle>
                 <Grid item md={12}>
+                    <img src="/oldindicateurs.PNG" width="100%"/>
+                </Grid>
+                    <Spacing spacing="2em" />
+                <Grid item md={12}>
                     <img src="/indicateurnumerisk.PNG" width="100%"/>
                 </Grid>
 
@@ -32,26 +36,27 @@ const ProfessionalsSituations = () => {
 
                 <Title>Elaboration de documents relatifs à la production et à la fourniture de services :​</Title>
                 <Grid item md={6}>
-                    IMAGE CAHIER DES CHARGES 1
+                    <img src="/cahierdescharges1.PNG" width="100%"/>
                 </Grid>
                 <Grid item md={6}>
-                    IMAGE CAHIER DES CHARGES 2
-                </Grid>
-                <Grid item md={6}>
-                    IMAGE CAHIER DES CHARGES 3
-                </Grid>
-                <Grid item md={6}>
-                    IMAGE CAHIER DES CHARGES 4
+                    <a href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</a>
                 </Grid>
 
                         <Spacing spacing="2em" />
-
+                
                 <Title>Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode :​</Title>
                 <Grid item md={6}>
-                    IMAGE EXEMPLE FORMIK
+                    <img src="/formik.jpg" width="80%"/>
                 </Grid>
                 <Grid item md={6}>
-                    IMAGE EXEMPLE REACT HOOK FORM
+                    <img src="/react-hook-form.jpg" width="80%"/>
+                </Grid>
+                    <Spacing spacing="2em" />
+                <Grid item md={6}>
+                    <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/formik-re-renders.gif" width="80%"/>
+                </Grid>
+                <Grid item md={6}>
+                    <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/react-hook-form-re-renders.gif" width="80%"/>
                 </Grid>
             </Grid>
         </>
