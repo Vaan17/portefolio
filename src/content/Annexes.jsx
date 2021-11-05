@@ -2,7 +2,7 @@
 
 const Annexes = () => {
 
-    return 'uobve'
+    return 'Void'
 }
 
 export default Annexes

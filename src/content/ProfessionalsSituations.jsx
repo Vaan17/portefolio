@@ -9,6 +9,15 @@ const STitle = styled(Title)`
 const SubTitle = styled(Title)`
     font-size: 18px;
 `
+const A = styled.a`
+    color: rgb(21, 24, 153);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 550;
+    &:hover{
+        text-decoration: underline;
+    }
+`
 
 const ProfessionalsSituations = () => {
 
@@ -39,7 +48,7 @@ const ProfessionalsSituations = () => {
                     <img src="/cahierdescharges1.PNG" alt="cahierdescharge-page1" width="100%"/>
                 </Grid>
                 <Grid item md={6}>
-                    <a href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</a>
+                    <A href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</A>
                 </Grid>
 
                         <Spacing spacing="2em" />
