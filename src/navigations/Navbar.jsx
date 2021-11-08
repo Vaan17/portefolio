@@ -17,7 +17,7 @@ const SToolbar = styled(Toolbar)`
 `
 const SListItem = styled(ListItem)`
   width: max-content !important;
-  padding: 8px 64px !important;
+  padding: 8px 3em !important;
   &:hover{
     background-color: rgba(224, 251, 255, .2);
     transition: background-color .5s, transform .5s;

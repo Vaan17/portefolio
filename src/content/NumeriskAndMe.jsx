@@ -53,18 +53,27 @@ const NumeriskAndMe = () => {
                 <Spacing spacing="5em" />
                 {/* SECOND PART */}
                 <Title>Mon rôle au sein de l'entreprise </Title>
-                <Grid item md={6} sm={12}>
+                <Grid item md={4} sm={12}>
                     <GridContent>
-                        <img src="/reactjs.jpg" alt="reactjs-img" width="80%"/>
+                        <img src="/reactjs.jpg" alt="reactjs-img" height="150px"/>
                         <Spacing spacing="1em" />
-                        <div>Bibliothèque JavaScript (front-end)</div>
+                        <div>Bibliothèque JavaScript</div>
+                        <div>(front-end)</div>
                     </GridContent>
                 </Grid>
-                <Grid item md={6} sm={12}>
+                <Grid item md={4} sm={12}>
                     <GridContent>
-                        <img src="/rubyonrails.png" alt="rubyonrails-img" width="80%"/>
+                        <img src="/rubyonrails.png" alt="rubyonrails-img" height="150px"/>
                         <Spacing spacing="1em" />
-                        <div>Framework Web (back-end)</div>
+                        <div>Framework Web</div>
+                        <div>(back-end)</div>
+                    </GridContent>
+                </Grid>
+                <Grid item md={4} sm={12}>
+                    <GridContent>
+                        <img src="/vscode.png" alt="VisualStudioCode-img" height="150px"/>
+                        <Spacing spacing="1em" />
+                        <div>Support de développement</div>
                     </GridContent>
                 </Grid>
             </Grid>

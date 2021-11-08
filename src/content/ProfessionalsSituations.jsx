@@ -29,7 +29,7 @@ const ProfessionalsSituations = () => {
                     <img src="/tableausynthese.PNG" alt="tableau-synthèse" width="100%"/>
                 </Grid>
 
-                    <Spacing spacing="2em" />
+                    <Spacing spacing="5em" />
 
                 <STitle>Participation à un projet d’évolution d’un SI :​</STitle>
                 <SubTitle>(solution applicative et d’infrastructure portant prioritairement sur le domaine de spécialité du candidat)​</SubTitle>
@@ -41,7 +41,7 @@ const ProfessionalsSituations = () => {
                     <img src="/indicateurnumerisk.PNG" alt="indicateurs-numerisk-fini" width="100%"/>
                 </Grid>
 
-                    <Spacing spacing="2em" />
+                    <Spacing spacing="5em" />
 
                 <Title>Elaboration de documents relatifs à la production et à la fourniture de services :​</Title>
                 <Grid item md={6}>
@@ -51,7 +51,7 @@ const ProfessionalsSituations = () => {
                     <A href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</A>
                 </Grid>
 
-                        <Spacing spacing="2em" />
+                        <Spacing spacing="5em" />
                 
                 <Title>Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode :​</Title>
                 <Grid item md={6}>
@@ -60,7 +60,7 @@ const ProfessionalsSituations = () => {
                 <Grid item md={6}>
                     <img src="/react-hook-form.jpg" alt="reacthookform-img" width="80%"/>
                 </Grid>
-                    <Spacing spacing="2em" />
+                    <Spacing spacing="5em" />
                 <Grid item md={6}>
                     <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/formik-re-renders.gif" alt="formik-use.gif" width="80%"/>
                 </Grid>

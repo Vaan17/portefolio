@@ -17,7 +17,7 @@ const App = () => {
   const history = createBrowserHistory()
 
   return (
-    <Router  history={history}>
+    <Router history={history}>
       <PageContainer>
         <Navbar />
           <PageContent>

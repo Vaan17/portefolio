@@ -5,7 +5,7 @@ export const PageContainer = styled.div`
     height: 100%;
 `
 export const PageContent = styled.div`
-    padding: 3em 16em;
+    padding: 3em 10em;
     height: calc(100vh - 14em) !important;
     overflow: auto;
 `

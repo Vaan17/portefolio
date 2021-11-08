@@ -50,7 +50,7 @@ const Deepening = () => {
         <>
             <Grid container>
                 <Title>L'application Numérisk un peu plus en détail :​</Title>
-                <Spacing spacing="10em" />
+                <Spacing spacing="2em" />
                 <Grid item md={8}>
                     <GridContent>
                     <Spacing spacing="1em" />
