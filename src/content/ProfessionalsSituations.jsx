@@ -27,6 +27,7 @@ const ProfessionalsSituations = () => {
                 <Title>Tableau de sythèse :</Title>
                 <Grid item md={12}>
                     <img src="/tableausynthese.PNG" alt="tableau-synthèse" width="100%"/>
+                    {/* <iframe src="/BTS_SIO_E6_tableau_synthèse.pdf" alt="tableau-synthèse" height="1000px" width="100%"></iframe> */}
                 </Grid>
 
                     <Spacing spacing="5em" />
@@ -51,7 +52,7 @@ const ProfessionalsSituations = () => {
                     <A href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</A>
                 </Grid>
 
-                        <Spacing spacing="5em" />
+                    <Spacing spacing="5em" />
                 
                 <Title>Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode :​</Title>
                 <Grid item md={6}>
@@ -66,6 +67,27 @@ const ProfessionalsSituations = () => {
                 </Grid>
                 <Grid item md={6}>
                     <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/react-hook-form-re-renders.gif" alt="reacthookform-use.gif" width="80%"/>
+                </Grid>
+
+                    <Spacing spacing="5em" />
+
+                <Title>Gérer le patrimoine informatique :</Title>
+                <Grid item md={6}>
+                    <img src="/glpilogo.png" alt="glpi-img" width="75%"/>
+                </Grid>
+                <Grid item md={6}>
+                    <img src="/fusioninventory.png" alt="fusioninventory-img" width="75%"/>
+                </Grid>
+
+                    <Spacing spacing="5em" />
+
+                <Title>Travailler en mode projet :</Title>
+                <Grid item md={8}>
+                    <img src="/trelloscreen.PNG" alt="fusioninventory-img" width="95%"/>
+                </Grid>
+                <Grid item md={4}>
+                    <div>Mise en place d'un cahier des charges</div>
+                    <div>Répartition du cahier des charges</div>
                 </Grid>
             </Grid>
         </>
