@@ -74,6 +74,7 @@ const NumeriskAndMe = () => {
                         <img src="/vscode.png" alt="VisualStudioCode-img" height="150px"/>
                         <Spacing spacing="1em" />
                         <div>Support de développement</div>
+                        <div>(editeur de code)</div>
                     </GridContent>
                 </Grid>
             </Grid>
