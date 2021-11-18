@@ -85,6 +85,9 @@ const ProfessionalsSituations = () => {
                 <Grid item md={6}>
                     <img src="/fusioninventory.png" alt="fusioninventory-img" width="75%"/>
                 </Grid>
+                <Grid item md={12}>
+                    <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="90%"/>
+                </Grid>
 
                     <Spacing spacing="5em" />
 
