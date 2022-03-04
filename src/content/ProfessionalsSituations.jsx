@@ -33,47 +33,8 @@ const ProfessionalsSituations = () => {
             <Grid container>
                 <Title>Tableau de sythèse :</Title>
                 <Grid item md={12}>
-                    <img src="/tableausynthese.PNG" alt="tableau-synthèse" width="100%"/>
-                    {/* <iframe src="/BTS_SIO_E6_tableau_synthèse.pdf" alt="tableau-synthèse" height="1000px" width="100%"></iframe> */}
-                </Grid>
-
-                    <Spacing spacing="5em" />
-
-                <STitle>Participation à un projet d’évolution d’un SI :​</STitle>
-                <SubTitle>(solution applicative et d’infrastructure portant prioritairement sur le domaine de spécialité du candidat)​</SubTitle>
-                <Grid item md={12}>
-                    <img src="/oldindicateurs.PNG" alt="anciens-indicateurs-numerisk" width="100%"/>
-                </Grid>
-                    <Spacing spacing="2em" />
-                <Grid item md={12}>
-                    <img src="/indicateurnumerisk.PNG" alt="indicateurs-numerisk-fini" width="100%"/>
-                </Grid>
-
-                    <Spacing spacing="5em" />
-
-                <Title>Elaboration de documents relatifs à la production et à la fourniture de services :​</Title>
-                <Grid item md={6}>
-                    <img src="/cahierdescharges1.PNG" alt="cahierdescharge-page1" width="100%"/>
-                </Grid>
-                <Grid item md={6}>
-                    <A href='/cahierdeschargesI.pdf' target='_blank' rel='noopener noreferrer'>Voir le cahier des charges complet</A>
-                </Grid>
-
-                    <Spacing spacing="5em" />
-                
-                <Title>Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode :​</Title>
-                <Grid item md={6}>
-                    <img src="/formik.jpg" alt="formik-img" width="80%"/>
-                </Grid>
-                <Grid item md={6}>
-                    <img src="/react-hook-form.jpg" alt="reacthookform-img" width="80%"/>
-                </Grid>
-                    <Spacing spacing="5em" />
-                <Grid item md={6}>
-                    <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/formik-re-renders.gif" alt="formik-use.gif" width="80%"/>
-                </Grid>
-                <Grid item md={6}>
-                    <img src="https://blog.logrocket.com/wp-content/uploads/2019/10/react-hook-form-re-renders.gif" alt="reacthookform-use.gif" width="80%"/>
+                    {/* <img src="/tableausynthese.PNG" alt="tableau-synthèse" width="100%"/> */}
+                    <iframe src="/Tableau de synthèse BTS SIO SLAM.pdf" alt="tableau-synthèse" height="1000px" width="100%"></iframe>
                 </Grid>
 
                     <Spacing spacing="5em" />
@@ -91,7 +52,18 @@ const ProfessionalsSituations = () => {
 
                     <Spacing spacing="5em" />
 
-                <Title>Travailler en mode projet :</Title>
+                <Title>Répondre aux incidents et aux demandes d'assistance et d'évolution :​</Title>
+                <p>(permissions numérisk)</p>
+
+                    <Spacing spacing="5em" />
+
+                <Title>Développer la présence en ligne de l'organisation :</Title>
+                <p>(cipecmeal (screen de l'appli) car en lien avec le cipecma)</p>
+                
+
+                    <Spacing spacing="5em" />
+
+                    <Title>Travailler en mode projet :</Title>
                 <Grid item md={8}>
                     <img src="/trelloscreen.PNG" alt="fusioninventory-img" width="95%"/>
                 </Grid>
@@ -104,11 +76,6 @@ const ProfessionalsSituations = () => {
                         <div>3. Répartition du cahier des charges</div>
                     </GridContent>
                 </Grid>
-
-                    <Spacing spacing="5em" />
-
-                <Title>Organiser son développement professionnel :</Title>
-                    <Spacing spacing="1rem" />
                 <Grid item md={6}>
                     <img src="/github.png" alt="github-img" width="60%"/>
                 </Grid>
@@ -116,14 +83,26 @@ const ProfessionalsSituations = () => {
                     <img src="/notion.png" alt="notion-img" width="50%"/>
                     <A href='https://www.notion.so/08c5ce15d88f4f4596c32ff4daca3eb6?v=7f62f792b6884e21a0f32b403dbe0425' target='_blank' rel='noopener noreferrer'>Voir exemple d'utilisation</A>
                 </Grid>
-                
+                <Grid item md={6}>
+                    <img src="/AzureDevops.png" alt="AzureDevops-img" width="60%"/>
+                </Grid>
+
                     <Spacing spacing="5em" />
 
-                <Title>Développer la présence en ligne de l'organisation :</Title>
+                <Title>Mettre à disposition des utilisateur un service informatique :</Title>
                     <Spacing spacing="1rem" />
-                <Grid item md={8}>
-                    <img src="/packs_numerisk.PNG" alt="packs_numerisk-img" width="80%"/>
+                <Grid item md={12}>
+                    <img src="/oldindicateurs.PNG" alt="anciens-indicateurs-numerisk" width="100%"/>
                 </Grid>
+                    <Spacing spacing="2em" />
+                <Grid item md={12}>
+                    <img src="/indicateurnumerisk.PNG" alt="indicateurs-numerisk-fini" width="100%"/>
+                </Grid>
+
+                    <Spacing spacing="5em" />
+
+                <Title>Organiser son développement professionnel :</Title>
+                
             </Grid>
         </>
     )
