@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 import { Grid } from '@mui/material'
-import {TinyText, Spacing} from '../styledComponent/styledComponent'
+import {TinyText, Spacing, PageContent} from '../styledComponent/styledComponent'
 const SGrid = styled(Grid)`
     display: flex;
     flex-direction: column !important;
@@ -24,7 +24,7 @@ const BoldText = styled(AlignText)`
 const Home = () => {
 
     return (
-        <>
+        <PageContent>
             <SGridContainer container>
                 <SGrid item md={6} sm={12}>
                     <div>
@@ -45,7 +45,7 @@ const Home = () => {
                 </SGrid>
                 <SGrid item md={6} sm={12}>
                     <div>
-                        Dossier Professionel
+                        Dossier Professionnel
                     </div>
                         <Spacing spacing="1em" />
                     <AlignText>
@@ -66,7 +66,7 @@ const Home = () => {
                     </AlignText>
                 </SGrid>
             </SGridContainer>
-        </>
+        </PageContent>
     )
 }
 

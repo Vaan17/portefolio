@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from '../styledComponent/styledComponent'
+import { PageContent, Title } from '../styledComponent/styledComponent'
 import styled from 'styled-components'
 
 const SingleCenteredText = styled.div`
@@ -17,11 +17,11 @@ const STitle = styled(Title)`
 const Annexes = () => {
 
     return (
-        <>
+        <PageContent>
             <SingleCenteredText>
                 <STitle>Synthèse de mon parcours</STitle>
             </SingleCenteredText>
-        </>
+        </PageContent>
     )
 }
 

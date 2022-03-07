@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
-import { Spacing, Title } from '../styledComponent/styledComponent'
+import { PageContent, Spacing, Title, SuperCard, Flex } from '../styledComponent/styledComponent'
 import MapIcon from '@mui/icons-material/Map'
 import PanToolIcon from '@mui/icons-material/PanTool'
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
@@ -19,6 +19,7 @@ const GridContent = styled.div`
 const ToolDiv = styled.div`
     display: flex;
     align-items: end;
+    font-size: 22px;
 `
 
 const Deepening = () => {
@@ -47,18 +48,13 @@ const Deepening = () => {
     ]
 
     return (
-        <>
-            <Grid container>
+        <PageContent>
+            <SuperCard>
                 <Title>L'application Numérisk un peu plus en détail :​</Title>
-                <Spacing spacing="2em" />
-                <Grid item md={8}>
-                    <GridContent>
-                    <Spacing spacing="1em" />
-                        <img src="/numerisklogo.png" alt="Logo Numerisk" width="70%" />
-                    </GridContent>
-                </Grid>
-                <Grid item md={4}>
-                    <GridContent>
+                    <Spacing spacing="3em" />
+                <Flex spaceAround>
+                    <img src="/numerisklogo.png" alt="Logo Numerisk" width="40%" />
+                    <Flex flexColumn>
                         {Tools.map((tool, index) => {
                             let isLastTool = false
                             if(index === Tools.length - 1){
@@ -71,11 +67,10 @@ const Deepening = () => {
                                 </>
                             )
                         })}
-                    </GridContent>
-                </Grid>
-            </Grid>
-
-        </>
+                    </Flex>
+                </Flex>
+            </SuperCard>
+        </PageContent>
     )
 }
 
