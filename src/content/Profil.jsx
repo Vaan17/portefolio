@@ -83,7 +83,7 @@ const Profil = () => {
                     <Spacing spacing="1em"/>
 
                     <BoldText>Langages maîtrisés :​</BoldText>
-                    <div>HTML : ★★★★☆ </div>
+                    <div>HTML : ★★★☆☆ </div>
                     <div>CSS : ★★★☆☆ </div>
                     <div>Java Script : ★☆☆☆☆ ​</div>
                     <div>PHP : ★★★☆☆ </div>

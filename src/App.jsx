@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContainer, PageContent, WidthlessPageContent } from './styledComponent/styledComponent'
+import { PageContainer } from './styledComponent/styledComponent'
 import Navbar from './navigations/Navbar'
 import EndBar from './navigations/EndBar'
 import { createBrowserHistory } from 'history'

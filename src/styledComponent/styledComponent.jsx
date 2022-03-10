@@ -58,7 +58,6 @@ export const Spacing = styled.div`
 
 export const SuperCard = styled(Card)`
     /* =-=-=-=-= Default =-=-=-=-= */
-        width: 100% !important;
         padding: 2em;
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
@@ -130,3 +129,8 @@ export const Flex = styled.div`
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
 
+export const ImageFrame = styled.div`
+    /* =-=-=-=-= Default =-=-=-=-= */
+        border: 10px outset #d5d5d5;
+    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`

@@ -1,4 +1,3 @@
-import { Grid } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
 import { PageContent, Spacing, Title, SuperCard, Flex } from '../styledComponent/styledComponent'
@@ -8,18 +7,15 @@ import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
 import PeopleIcon from '@mui/icons-material/People'
 import DescriptionIcon from '@mui/icons-material/Description';
 
-const GridContent = styled.div`
-    display: flex;
-    flex-direction: column !important;
-    align-items: ${(props) => props.alignment ?? 'flex-start'} !important;
-    padding: ${(props) => props.padding ?? 'none'} !important;
-    font-size: 28px;
-    font-weight: 550;
-`
 const ToolDiv = styled.div`
     display: flex;
     align-items: end;
     font-size: 22px;
+`
+const SSuperCard = styled(SuperCard)`
+    /* =-=-=-=-= Default =-=-=-=-= */
+        min-height: -webkit-fill-available;
+    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
 
 const Deepening = () => {
@@ -49,7 +45,7 @@ const Deepening = () => {
 
     return (
         <PageContent>
-            <SuperCard>
+            <SSuperCard>
                 <Title>L'application Numérisk un peu plus en détail :​</Title>
                     <Spacing spacing="3em" />
                 <Flex spaceAround>
@@ -69,7 +65,7 @@ const Deepening = () => {
                         })}
                     </Flex>
                 </Flex>
-            </SuperCard>
+            </SSuperCard>
         </PageContent>
     )
 }

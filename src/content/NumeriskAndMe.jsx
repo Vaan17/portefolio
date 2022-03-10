@@ -75,6 +75,8 @@ const NumeriskAndMe = () => {
                         <div>Framework Web</div>
                         <div>(Back-end)</div>
                     </Flex>
+                </Flex>
+                <Flex spaceAround>
                     <Flex flexColumn>
                         <img src="/TypeScript.png" alt="rubyonrails-img" height="150px"/>
                             <Spacing spacing="1em" />

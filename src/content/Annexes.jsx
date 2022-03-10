@@ -8,7 +8,7 @@ const SingleCenteredText = styled.div`
     display: flex;
     align-items: center;
 `
-const STitle = styled(Title)`
+const ExtraTitle = styled(Title)`
     display: flex;
     justify-content: center;
     font-size: 48px;
@@ -19,7 +19,7 @@ const Annexes = () => {
     return (
         <PageContent>
             <SingleCenteredText>
-                <STitle>Synthèse de mon parcours</STitle>
+                <ExtraTitle>Synthèse de mon parcours</ExtraTitle>
             </SingleCenteredText>
         </PageContent>
     )
