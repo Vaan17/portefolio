@@ -1,22 +1,26 @@
 import "moment/locale/fr";
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import moment from "moment";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ListItem from "@mui/material/ListItem";
 import { useHistory } from "react-router-dom";
 
 const SAppBar = styled(AppBar)`
   height: 4em;
+  background-image: linear-gradient(to right, #0d4073, #65a1dc) !important;
 `;
 const SToolbar = styled(Toolbar)`
   display: flex;
   justify-content: space-between;
 `;
 const SListItem = styled(ListItem)`
-  width: max-content !important;
+  width: 10vw !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
   padding: 8px 3em !important;
   cursor: pointer !important;
   &:hover {
@@ -25,25 +29,30 @@ const SListItem = styled(ListItem)`
   }
 `;
 const ListContainer = styled.div`
+  position: relative;
   display: flex;
-  width: 50vw;
   justify-content: center;
-  padding: 0 3em;
 `;
-const Header = styled.div`
-  display: flex;
-  padding: 0 1em;
-`;
+const Header = styled.div``;
 const Separator = styled.div`
   border-left: 1px solid white;
 `;
 const SDiv = styled.div`
   display: flex;
 `;
-
+const FollowingWhiteBar = styled.div`
+  transition: all 0.2s;
+  width: 10vw;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  left: 0;
+  margin-left: calc(10vw * var(--tab));
+`;
 const Navbar = () => {
   const history = useHistory();
   const date = moment().locale("fr").format("LL");
+  const [lastTabSelectedIndex, setLastTabSelectedIndex] = useState(0);
 
   const pages = [
     {
@@ -73,35 +82,39 @@ const Navbar = () => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <SAppBar position="static">
-        <SToolbar>
-          <img
-            src="https://www.cipecma.com/templates/cipecma/images/logo.png"
-            alt="Logo Cipecma"
-            width="100px"
-            height="55px"
+    <SAppBar>
+      <SToolbar>
+        <img
+          src="https://www.cipecma.com/templates/cipecma/images/logo.png"
+          alt="Logo Cipecma"
+          width="100px"
+          height="55px"
+        />
+        <Header>
+          <ListContainer>
+            {pages.map((page, index) => (
+              <>
+                <SListItem
+                  onClick={() => {
+                    history.push(page.path);
+                    setLastTabSelectedIndex(index);
+                  }}
+                >
+                  {page.name}
+                </SListItem>
+                {page !== pages[pages.length - 1] && <Separator />}
+              </>
+            ))}
+          </ListContainer>
+          <FollowingWhiteBar
+            style={{
+              "--tab": lastTabSelectedIndex,
+            }}
           />
-          <Header>
-            <ListContainer>
-              {pages.map((page) => (
-                <SDiv>
-                  <SListItem
-                    onClick={() => {
-                      history.push(page.path);
-                    }}
-                  >
-                    {page.name}
-                  </SListItem>
-                  {page !== pages[pages.length - 1] && <Separator />}
-                </SDiv>
-              ))}
-            </ListContainer>
-          </Header>
-          {date}
-        </SToolbar>
-      </SAppBar>
-    </Box>
+        </Header>
+        {date}
+      </SToolbar>
+    </SAppBar>
   );
 };
 

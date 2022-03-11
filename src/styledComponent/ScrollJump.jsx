@@ -1,55 +1,141 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { ENDBAR_HEIGHT, NAVBAR_HEIGHT, PAGECONTENT_PADDING, WINDOW_HEIGHT } from './Constants'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import CircleIcon from '@mui/icons-material/Circle';
-import { IconButton, Tooltip } from '@mui/material';
+import React, { useCallback, useEffect, useState } from "react";
+import styled from "styled-components";
+import {
+  ENDBAR_HEIGHT,
+  NAVBAR_HEIGHT,
+  PAGECONTENT_PADDING,
+  WINDOW_HEIGHT,
+} from "./constants";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
+import CircleIcon from "@mui/icons-material/Circle";
+import { IconButton, Tooltip } from "@mui/material";
+import $ from "jquery";
+const SIconButton = styled(IconButton)`
+  &:after {
+    content: "";
+    width: 3px;
+    height: 50px;
+    top: 40px;
+    background-color: red;
 
+    /* create a new stacking context */
+    position: absolute;
+    z-index: -1; /* to be below the parent element */
+  }
+`;
 const ScrollNavigation = styled.div`
-    /* =-=-=-=-= Default =-=-=-=-= */
-        position: absolute;
-        height: calc(${WINDOW_HEIGHT}px - ${NAVBAR_HEIGHT}em - ${ENDBAR_HEIGHT}em - ${PAGECONTENT_PADDING * 2}em);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 3em;
-    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
-`
+  /* =-=-=-=-= Default =-=-=-=-= */
+  position: fixed;
+  margin-left: 8em;
+  height: calc(
+    ${WINDOW_HEIGHT}px - ${NAVBAR_HEIGHT}em - ${ENDBAR_HEIGHT}em -
+      ${PAGECONTENT_PADDING * 2}em
+  );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3em;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`;
 const BlueCircle = styled(CircleIcon)`
-    /* =-=-=-=-= Default =-=-=-=-= */
-        color: #4abcff
-    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
-`
+  /* =-=-=-=-= Default =-=-=-=-= */
+  color: #4abcff;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`;
 const BlueUncheckedRadio = styled(RadioButtonUncheckedIcon)`
-    /* =-=-=-=-= Default =-=-=-=-= */
-        color: #86c3ff
-    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
-`
+  /* =-=-=-=-= Default =-=-=-=-= */
+  color: #86c3ff;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`;
 
-const ScrollJump = ({arrayOfRefs}) => {
-    const [currentPosition, setCurrentPosition] = useState(arrayOfRefs[0].anchor)
-    const scrollTo = (ref) => {
-        setCurrentPosition(ref)
-        return ref.current?.scrollIntoView({ behavior: 'smooth' })
+const ScrollJump = ({ arrayOfRefs }) => {
+  const [currentPosition, setCurrentPosition] = useState(arrayOfRefs[0].anchor);
+  const [currentScroll, setCurrentScroll] = useState(window.scrollY);
+  const [isBottom, setIsBottom] = useState(false);
+  const [currentRef, setCurrentRef] = useState({
+    ref: arrayOfRefs[0],
+    index: 0,
+  });
+  const scrollTo = useCallback(
+    (ref) => {
+      //setCurrentPosition(ref);
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollTo({
+          top: ref.current.offsetTop - 74,
+          behavior: "smooth",
+        });
+      }, 1);
+    },
+    [currentScroll]
+  );
+
+  useEffect(() => {
+    let newRef = undefined;
+    console.log(arrayOfRefs.map((ref) => ref.anchor.current.offsetTop));
+    console.log(currentScroll);
+    arrayOfRefs.forEach((ref, index) => {
+      if (ref.anchor.current?.offsetTop <= currentScroll + 74) {
+        newRef = { ref, index };
+      }
+    });
+    if (!newRef) {
+      return;
     }
+    if (currentRef?.index !== newRef.index) {
+      setCurrentRef(newRef);
+      setCurrentPosition(newRef.ref.anchor);
+    }
+    if ($(window).scrollTop() + $(window).height() === $(document).height()) {
+      setIsBottom(true);
+    } else {
+      if (isBottom) {
+        setIsBottom(false);
+      }
+    }
+  }, [currentScroll, arrayOfRefs, currentRef, isBottom]);
 
-    return(
-        <ScrollNavigation>
-            {arrayOfRefs.map((ref) => {
-                    return (
-                        <Tooltip title={ref.title}>
-                            <IconButton onClick={()=>scrollTo(ref.anchor)}>
-                                {currentPosition === ref.anchor
-                                 ? <BlueCircle fontSize='medium'/>
-                                 : <BlueUncheckedRadio fontSize='medium'/>                             
-                                }
-                            </IconButton>
-                        </Tooltip>
-                    )
-                
-            })}
-        </ScrollNavigation>
-    )
-}
+  function logit() {
+    setCurrentScroll(window.pageYOffset);
+  }
 
-export default ScrollJump
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+
+  return (
+    <ScrollNavigation>
+      {arrayOfRefs.map((ref) => {
+        return (
+          <Tooltip title={ref.title}>
+            <SIconButton onClick={() => scrollTo(ref.anchor)}>
+              {currentPosition === ref.anchor ? (
+                <BlueCircle fontSize="medium" />
+              ) : (
+                <BlueUncheckedRadio fontSize="medium" />
+              )}
+            </SIconButton>
+          </Tooltip>
+        );
+      })}
+      {isBottom && (
+        <div
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setIsBottom(false);
+          }}
+        >
+          go to top
+        </div>
+      )}
+    </ScrollNavigation>
+  );
+};
+
+export default ScrollJump;
