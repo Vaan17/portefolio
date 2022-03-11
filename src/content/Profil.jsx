@@ -2,13 +2,30 @@ import { Avatar } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
 import {TinyText, BoldText, Title, Spacing, SuperCard, Flex, WidthlessPageContent} from '../styledComponent/styledComponent'
-
+import StarHalfIcon from '@mui/icons-material/StarHalf';
+import StarIcon from '@mui/icons-material/Star';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+const Star = styled(StarIcon)`
+    font-size: 16px !important;
+`
+const StarHalf = styled(StarHalfIcon)`
+   font-size: 16px !important; 
+`
+    const StyledImg = styled.img`
+    transition: all 0.2s;
+    &:hover {
+        transform: scale(1.1)
+    }
+`
+const StarEmpty= styled(StarOutlineIcon)`
+    font-size: 16px !important;
+`
 const TopBanner = styled.div`
     /* =-=-=-=-= Default =-=-=-=-= */
         margin: -2em -2em 0 -2em;
         padding: 2em;
         background-color: rgba(0, 97, 126, 0.85);
-        color: white
+        color: white;
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
 
@@ -41,7 +58,7 @@ const Profil = () => {
                             </TinyText>
                         </Flex>
                         <Avatar sx={{ width: 150, height: 150 }}>
-                            <img src="/melvin-cv.png" alt="melvin-cv" height="200vh" />
+                            <StyledImg src="/melvin-cv.png" alt="melvin-cv" height="200vh" />
                         </Avatar>
                     </Flex>
                 </TopBanner>
@@ -83,12 +100,12 @@ const Profil = () => {
                     <Spacing spacing="1em"/>
 
                     <BoldText>Langages maîtrisés :​</BoldText>
-                    <div>HTML : ★★★☆☆ </div>
-                    <div>CSS : ★★★☆☆ </div>
-                    <div>Java Script : ★☆☆☆☆ ​</div>
-                    <div>PHP : ★★★☆☆ </div>
-                    <div>ReactJS : ★★★☆☆ ​</div>
-                    <div>RubyOnRails : ★☆☆☆☆​ </div>
+                    <div>HTML : <Star /><Star /><Star /><Star /><StarEmpty /></div>
+                    <div>CSS : <Star /><Star /><Star /><Star /><StarEmpty /></div>
+                    <div>Java Script :  <Star /><Star /><Star /><Star /><StarEmpty /> ​</div>
+                    <div>PHP :  <Star /><Star /><Star /><StarEmpty /><StarEmpty /></div>
+                    <div>ReactJS :  <Star /><Star /><Star /><Star /><StarEmpty /> ​</div>
+                    <div>RubyOnRails :  <Star /><Star /><Star /><StarHalf /><StarEmpty />​ </div>
                 </Flex>
 
                 <Spacing spacing="3em"/>
