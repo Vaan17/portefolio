@@ -28,7 +28,7 @@ const ProfessionalsSituations = () => {
   const thirdSituation = useRef(null);
   const fourthSituation = useRef(null);
   const fifthSituation = useRef(null);
-  const sixthfirstSituation = useRef(null);
+  const sixthSituation = useRef(null);
 
   const arrayOfRefs = [
     {
@@ -57,7 +57,7 @@ const ProfessionalsSituations = () => {
       title: "Mettre à disposition des utilisateur un service informatique",
     },
     {
-      anchor: sixthfirstSituation,
+      anchor: sixthSituation,
       title: "Organiser son développement professionnel",
     },
   ];
@@ -92,7 +92,7 @@ const ProfessionalsSituations = () => {
                 />
               </Flex>
               <ImageFrame>
-                <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="90%" />
+                <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="100%" />
               </ImageFrame>
             </SuperCard>
 
@@ -211,7 +211,7 @@ const ProfessionalsSituations = () => {
 
             <Spacing spacing="3em" />
 
-            <SuperCard className="section6" ref={sixthfirstSituation}>
+            <SuperCard className="section6" ref={sixthSituation}>
               <Title>Organiser son développement professionnel :</Title>
               <ImageFrame>
                 <img

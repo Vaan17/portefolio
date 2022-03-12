@@ -1,6 +1,22 @@
 import styled, { css } from "styled-components";
 import { Card } from "@mui/material";
 
+const parseUnit = ({
+  unit,
+  defaultUnit,
+}) => {
+  switch (typeof unit) {
+      case 'number':
+          return `${unit}em`
+      case 'string':
+          return unit
+      case 'boolean':
+          return unit ? defaultUnit : 0
+      default:
+          return 0
+  }
+}
+
 export const PageContainer = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   width: 100%;
@@ -11,7 +27,7 @@ export const PageContainer = styled.div`
 
 export const PageContent = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
-  padding: 3em 10em; */
+  padding: 3em 10em;
   background-color: rgb(240, 240, 240);
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
@@ -58,6 +74,7 @@ export const Spacing = styled.div`
 export const SuperCard = styled(Card)`
   /* =-=-=-=-= Default =-=-=-=-= */
   padding: 2em;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 
@@ -114,6 +131,13 @@ export const Flex = styled.div`
         : flexEnd && "flex-end"};
     `}
 
+    /* =-=-=-=-= Gap =-=-=-=-= */
+    ${({ gap }) =>
+        gap &&
+        css`
+            gap: ${parseUnit({ unit: gap, defaultUnit: '1rem' })};
+        `}
+
     /* =-=-=-=-= Full size =-=-=-=-= */
     ${({ fullHeight }) =>
     fullHeight &&
@@ -130,5 +154,6 @@ export const Flex = styled.div`
 export const ImageFrame = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   border: 10px outset #d5d5d5;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;

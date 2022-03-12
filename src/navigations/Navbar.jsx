@@ -21,7 +21,7 @@ const SListItem = styled(ListItem)`
   display: flex;
   justify-content: center !important;
   align-items: center !important;
-  padding: 8px 3em !important;
+  //padding: 8px 3em !important;
   cursor: pointer !important;
   &:hover {
     background-color: rgba(224, 251, 255, 0.2);
@@ -37,9 +37,6 @@ const Header = styled.div``;
 const Separator = styled.div`
   border-left: 1px solid white;
 `;
-const SDiv = styled.div`
-  display: flex;
-`;
 const FollowingWhiteBar = styled.div`
   transition: all 0.2s;
   width: 10vw;
@@ -47,7 +44,8 @@ const FollowingWhiteBar = styled.div`
   background-color: white;
   position: relative;
   left: 0;
-  margin-left: calc(10vw * var(--tab));
+  margin-left: calc((10vw * var(--tab)) + (1px * var(--tab)));
+  border-radius: 50px;
 `;
 const Navbar = () => {
   const history = useHistory();

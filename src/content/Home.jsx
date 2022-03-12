@@ -13,7 +13,6 @@ const SGrid = styled(Grid)`
   font-size: 28px;
 `;
 const SGridContainer = styled(Grid)`
-  //height: 100% !important;
   display: flex;
   align-items: center;
   height: calc(100vh - 14em) !important;

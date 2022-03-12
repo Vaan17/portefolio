@@ -42,7 +42,7 @@ const Profil = () => {
         <WidthlessPageContent>
             <SuperCard>
                 <TopBanner>
-                    <Flex spaceBetween>
+                    <Flex spaceBetween alignItemsCenter>
                         <Flex flexColumn>
                             <div>AIMÉ Melvin​</div>
                             <div>19 ans​</div>
@@ -95,17 +95,41 @@ const Profil = () => {
                 <Flex flexColumn>
                     <Title>Compétences :​</Title>
                     <BoldText>Logiciels maîtrisés :</BoldText>
-                    <div>Word, OpenOffice, Visual Studio Code, Wamp, GitHub, Ubuntu.​</div>
+                        <Spacing spacing="1em"/>
+                    <Flex gap={3}>
+                        <Flex flexColumn gap={.5}>
+                            <li>Word</li>
+                            <li>Visual Studio Code</li>
+                        </Flex>
+                        <Flex flexColumn gap={.5}>
+                            <li>GitHub</li>
+                            <li>Ubuntu Terminal</li>
+                        </Flex>
+                        <Flex flexColumn gap={.5}>
+                            <li>Wamp</li>
+                            <li>PhpMyAdmin</li>
+                        </Flex>
+                    </Flex>
 
                     <Spacing spacing="1em"/>
 
                     <BoldText>Langages maîtrisés :​</BoldText>
-                    <div>HTML : <Star /><Star /><Star /><Star /><StarEmpty /></div>
-                    <div>CSS : <Star /><Star /><Star /><Star /><StarEmpty /></div>
-                    <div>Java Script :  <Star /><Star /><Star /><Star /><StarEmpty /> ​</div>
-                    <div>PHP :  <Star /><Star /><Star /><StarEmpty /><StarEmpty /></div>
-                    <div>ReactJS :  <Star /><Star /><Star /><Star /><StarEmpty /> ​</div>
-                    <div>RubyOnRails :  <Star /><Star /><Star /><StarHalf /><StarEmpty />​ </div>
+                        <Spacing spacing="1em"/>
+                    <Flex gap={3}>
+                        <Flex flexColumn gap={.5}>
+                            <li>HTML : <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                            <li>PHP :  <Star /><Star /><Star /><StarEmpty /><StarEmpty /></li>
+                            <li>Android Kotlin :  <Star /><Star /><StarEmpty /><StarEmpty /><StarEmpty /></li>
+                        </Flex>
+                        <Flex flexColumn gap={.5}>
+                            <li>CSS : <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                            <li>ReactJS :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                        </Flex>
+                        <Flex flexColumn gap={.5}>
+                            <li>Java Script :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                            <li>RubyOnRails :  <Star /><Star /><Star /><StarHalf /><StarEmpty />​</li>
+                        </Flex>
+                    </Flex>
                 </Flex>
 
                 <Spacing spacing="3em"/>
