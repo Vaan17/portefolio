@@ -11,14 +11,14 @@ const Star = styled(StarIcon)`
 const StarHalf = styled(StarHalfIcon)`
    font-size: 16px !important; 
 `
-    const StyledImg = styled.img`
+const StarEmpty= styled(StarOutlineIcon)`
+font-size: 16px !important;
+`
+const StyledImg = styled.img`
     transition: all 0.2s;
     &:hover {
         transform: scale(1.1)
     }
-`
-const StarEmpty= styled(StarOutlineIcon)`
-    font-size: 16px !important;
 `
 const TopBanner = styled.div`
     /* =-=-=-=-= Default =-=-=-=-= */

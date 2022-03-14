@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ScrollJump from "../styledComponent/ScrollJump";
 import {
   Flex,
@@ -15,9 +15,14 @@ const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
   margin: 0;
   padding-top: 1em;
-  font-size: 28px !important;
-  background-color: #d5d5d5;
-  border-radius: 0 5% 5% 0;
+  font-size: 20px !important;
+  ${({ displayBackground }) =>
+    (displayBackground) &&
+    css`
+      background-color: #d5d5d5;
+      border-radius: 0 5% 5% 0;
+    `
+  }
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 
@@ -94,6 +99,10 @@ const ProfessionalsSituations = () => {
               <ImageFrame>
                 <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="100%" />
               </ImageFrame>
+                <Spacing spacing="2em" />
+              <ImageFrame>
+                <img src="/glpi_inventaire.PNG" alt="glpiscreen-img" width="100%" />
+              </ImageFrame>
             </SuperCard>
 
             <Spacing spacing="3em" />
@@ -103,14 +112,70 @@ const ProfessionalsSituations = () => {
                 Répondre aux incidents et aux demandes d'assistance et
                 d'évolution :​
               </Title>
-              <p>(permissions numérisk)</p>
+              <ImageFrame>
+                <img
+                  src="/contact.jpg"
+                  alt="anciens-indicateurs-numerisk"
+                  width="100%"
+                />
+              </ImageFrame>
+                <Spacing spacing="2em" />
+              <Flex flexColumn>
+                <Title>Procédure d'une demande d'assistance</Title>
+                <LargeOl>
+                  <li>Le client prend contact via l'adresse de contact de l'entreprise, ou par téléphone.</li><br/>
+                  <li>Les différentes demandes sont relevées.</li><br/>
+                  <li>Transfert et attribution des demandes à l'équipe de développement.</li><br/>
+                  <li>Application de la demande au sein de l'application.</li><br/>
+                  <li>Création d'une demande de mise à jour de l'application comportant les modifications.</li>
+                </LargeOl>
+              </Flex>
+                <Spacing spacing="2em" />
+              <ImageFrame>
+                <img
+                  src="/gitPR1.PNG"
+                  alt="gitPR1"
+                  width="100%"
+                />
+                <img
+                  src="/gitPR2.PNG"
+                  alt="gitPR2"
+                  width="100%"
+                />
+              </ImageFrame>
+                <Spacing spacing="2em" />
+              <ImageFrame>
+                <img
+                  src="/histoPR.PNG"
+                  alt="Historique des PR Numérisk"
+                  width="100%"
+                />
+              </ImageFrame>
             </SuperCard>
 
             <Spacing spacing="3em" />
 
             <SuperCard className="section3" ref={thirdSituation}>
               <Title>Développer la présence en ligne de l'organisation :</Title>
-              <p>(cipecmeal (screen de l'appli) car en lien avec le cipecma)</p>
+              <Flex flexColumn>
+                <ImageFrame>
+                  <img
+                    src="/oldindicateurs.PNG"
+                    alt="anciens-indicateurs-numerisk"
+                    width="100%"
+                  />
+                </ImageFrame>
+
+                <Spacing spacing="2em" />
+
+                <ImageFrame>
+                  <img
+                    src="/indicateurnumerisk.PNG"
+                    alt="indicateurs-numerisk-fini"
+                    width="100%"
+                  />
+                </ImageFrame>
+              </Flex>
             </SuperCard>
 
             <Spacing spacing="3em" />
@@ -148,11 +213,9 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
-                <LargeOl>
-                  <li>Entretien avec le(s) client(s)</li>
-                  <br />
-                  <li>Mise en place d'un cahier des charges</li>
-                  <br />
+                <LargeOl displayBackground>
+                  <li>Entretien avec le(s) client(s)</li><br/>
+                  <li>Mise en place d'un cahier des charges</li><br/>
                   <li>Répartition du cahier des charges</li>
                 </LargeOl>
               </Flex>
@@ -188,21 +251,32 @@ const ProfessionalsSituations = () => {
               <Title>
                 Mettre à disposition des utilisateur un service informatique :
               </Title>
-              <Flex flexColumn>
+              <Flex flexColumn gap={2}>
                 <ImageFrame>
                   <img
-                    src="/oldindicateurs.PNG"
-                    alt="anciens-indicateurs-numerisk"
+                    src="/CipecmealStudentSign_in.png"
+                    alt="Inscription Etudiant"
                     width="100%"
                   />
                 </ImageFrame>
-
-                <Spacing spacing="2em" />
-
                 <ImageFrame>
                   <img
-                    src="/indicateurnumerisk.PNG"
-                    alt="indicateurs-numerisk-fini"
+                    src="/CipecmealEntrepriseSign_in.png"
+                    alt="Inscription Entreprise"
+                    width="100%"
+                  />
+                </ImageFrame>
+                <ImageFrame>
+                  <img
+                    src="/CipecmealLogin.png"
+                    alt="Login Utilisateur"
+                    width="100%"
+                  />
+                </ImageFrame>
+                <ImageFrame>
+                  <img
+                    src="/CipecmealMyAccount.png"
+                    alt="Mon compte utilisateur"
                     width="100%"
                   />
                 </ImageFrame>

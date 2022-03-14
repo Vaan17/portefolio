@@ -66,7 +66,7 @@ const ScrollJump = ({ arrayOfRefs }) => {
       ref.current?.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => {
         window.scrollTo({
-          top: ref.current.offsetTop - 74,
+          top: ref.current.offsetTop - 68,
           behavior: "smooth",
         })
       }, 1)

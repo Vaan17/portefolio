@@ -60,25 +60,28 @@ const NumeriskAndMe = () => {
                     <Spacing spacing="1em" />
                 <Flex spaceAround>
                     <Flex flexColumn>
-                        <img src="/reactjs.jpg" alt="reactjs-img" height="150px"/>
+                        <img src="/reactjs.jpg" alt="reactjs-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Bibliothèque JavaScript</div>
                         <div>(Front-end)</div>
                     </Flex>
                     <Flex flexColumn>
-                        <img src="/rubyonrails.png" alt="rubyonrails-img" height="150px"/>
+                        <img src="/rubyonrails.png" alt="rubyonrails-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Framework Web</div>
                         <div>(Back-end)</div>
                     </Flex>
+                </Flex>
+                    <Spacing spacing="2em" />
+                <Flex spaceAround>
                     <Flex flexColumn>
-                        <img src="/TypeScript.png" alt="rubyonrails-img" height="150px"/>
+                        <img src="/TypeScript.png" alt="rubyonrails-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Framework Web</div>
                         <div>(Front-end)</div>
                     </Flex>
                     <Flex flexColumn>
-                        <img src="/vscode.png" alt="VisualStudioCode-img" height="150px"/>
+                        <img src="/vscode.png" alt="VisualStudioCode-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Support de développement</div>
                         <div>(Éditeur de code)</div>

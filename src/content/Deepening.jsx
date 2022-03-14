@@ -54,7 +54,7 @@ const Deepening = () => {
         <PageContent>
             <SSuperCard>
                 <Title>L'application Numérisk un peu plus en détail :​</Title>
-                    <Spacing spacing="8em" />
+                 
                 <Flex justifyCenter gap={10}>
                     <img src="/numerisklogo.png" alt="Logo Numerisk" width="650px" />
                     <Flex flexColumn>

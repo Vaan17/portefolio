@@ -34,7 +34,7 @@ export const PageContent = styled.div`
 
 export const WidthlessPageContent = styled(PageContent)`
   /* =-=-=-=-= Default =-=-=-=-= */
-  padding: 3em 32em;
+  padding: 3em 22vw;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 

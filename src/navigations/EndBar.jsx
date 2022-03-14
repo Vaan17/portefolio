@@ -1,6 +1,4 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import styled from "styled-components";
 
 const A = styled.a`
@@ -19,7 +17,6 @@ const SAppBar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   position: fixed;
   bottom: 0;
 `;
