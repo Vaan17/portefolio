@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Card } from "@mui/material";
+import { Button, Card } from "@mui/material";
 
 const parseUnit = ({
   unit,
@@ -24,20 +24,17 @@ export const PageContainer = styled.div`
   margin: 4em 0 !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const PageContent = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   padding: 3em 10em;
   background-color: rgb(240, 240, 240);
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const WidthlessPageContent = styled(PageContent)`
   /* =-=-=-=-= Default =-=-=-=-= */
   padding: 3em 22vw;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const TinyText = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   display: flex;
@@ -46,14 +43,12 @@ export const TinyText = styled.div`
   font-size: 18px;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const BoldText = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   font-weight: bold;
   font-size: 22px;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const Title = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   font-size: 28px;
@@ -63,21 +58,23 @@ export const Title = styled.div`
   padding-bottom: 0.5em;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
+export const SubTitle = styled(Title)`
+  /* =-=-=-=-= Default =-=-=-=-= */
+  font-size: 22px;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`;
 export const Spacing = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   padding-bottom: ${(props) => props.spacing};
   width: 100%;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const SuperCard = styled(Card)`
   /* =-=-=-=-= Default =-=-=-=-= */
   padding: 2em;
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const Flex = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   display: flex;
@@ -150,10 +147,17 @@ export const Flex = styled.div`
       width: 100%;
     `} /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 export const ImageFrame = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   border: 10px outset #d5d5d5;
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
+export const StyledButton = styled(Button)`
+  /* =-=-=-=-= Default =-=-=-=-= */
+  background-color: white !important;
+  border: 2px solid #4abcff !important;
+  color: #4abcff !important;
+  margin: 0 .5em !important;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`

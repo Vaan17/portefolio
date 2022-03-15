@@ -1,30 +1,32 @@
 import { Grid } from "@mui/material";
 import React, { useRef } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import ScrollJump from "../styledComponent/ScrollJump";
 import {
   Flex,
   ImageFrame,
   PageContent,
   Spacing,
+  StyledButton,
+  SubTitle,
   SuperCard,
   Title,
 } from "../styledComponent/styledComponent";
+import BookIcon from '@mui/icons-material/Book';
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
   margin: 0;
   padding-top: 1em;
   font-size: 20px !important;
-  ${({ displayBackground }) =>
-    (displayBackground) &&
-    css`
-      background-color: #d5d5d5;
-      border-radius: 0 5% 5% 0;
-    `
-  }
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
+const PanelBackground = styled(Flex)`
+  /* =-=-=-=-= Default =-=-=-=-= */
+    background-color: #d5d5d5;
+    border-radius: 0 5% 5% 0;
+  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`
 
 const ProfessionalsSituations = () => {
   const overviewTable = useRef(null);
@@ -87,7 +89,7 @@ const ProfessionalsSituations = () => {
             <Spacing spacing="3em" />
 
             <SuperCard className="section1" ref={firstSituation}>
-              <Title>Gérer le patrimoine informatique :</Title>
+              <Title>I/ Gérer le patrimoine informatique :</Title>
               <Flex spaceAround>
                 <img src="/glpilogo.png" alt="glpi-img" width="25%" />
                 <img
@@ -96,10 +98,12 @@ const ProfessionalsSituations = () => {
                   width="25%"
                 />
               </Flex>
+              <SubTitle>1.1: Interface d'acceuil de GLPI</SubTitle>
               <ImageFrame>
                 <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="100%" />
               </ImageFrame>
                 <Spacing spacing="2em" />
+              <SubTitle>1.2: Panneau des ordinateurs inventoriés sur le gestionnaire</SubTitle>
               <ImageFrame>
                 <img src="/glpi_inventaire.PNG" alt="glpiscreen-img" width="100%" />
               </ImageFrame>
@@ -109,9 +113,10 @@ const ProfessionalsSituations = () => {
 
             <SuperCard className="section2" ref={secondSituation}>
               <Title>
-                Répondre aux incidents et aux demandes d'assistance et
+                II/ Répondre aux incidents et aux demandes d'assistance et
                 d'évolution :​
               </Title>
+              <SubTitle>2.1: Informations de contact de l'entreprise</SubTitle>
               <ImageFrame>
                 <img
                   src="/contact.jpg"
@@ -121,7 +126,7 @@ const ProfessionalsSituations = () => {
               </ImageFrame>
                 <Spacing spacing="2em" />
               <Flex flexColumn>
-                <Title>Procédure d'une demande d'assistance</Title>
+                <SubTitle>2.2: Procédure d'une demande d'assistance</SubTitle>
                 <LargeOl>
                   <li>Le client prend contact via l'adresse de contact de l'entreprise, ou par téléphone.</li><br/>
                   <li>Les différentes demandes sont relevées.</li><br/>
@@ -131,6 +136,7 @@ const ProfessionalsSituations = () => {
                 </LargeOl>
               </Flex>
                 <Spacing spacing="2em" />
+              <SubTitle>2.3: Modifications en cours de validation suite à une demande</SubTitle>
               <ImageFrame>
                 <img
                   src="/gitPR1.PNG"
@@ -144,6 +150,7 @@ const ProfessionalsSituations = () => {
                 />
               </ImageFrame>
                 <Spacing spacing="2em" />
+              <SubTitle>2.4: Historique d'une partie des améliorations déjà implémentées</SubTitle>
               <ImageFrame>
                 <img
                   src="/histoPR.PNG"
@@ -156,8 +163,9 @@ const ProfessionalsSituations = () => {
             <Spacing spacing="3em" />
 
             <SuperCard className="section3" ref={thirdSituation}>
-              <Title>Développer la présence en ligne de l'organisation :</Title>
+              <Title>III/ Développer la présence en ligne de l'organisation :</Title>
               <Flex flexColumn>
+                <SubTitle>3.1: Ancienne version non-fonctionnelle des indicateurs Numérisk</SubTitle>
                 <ImageFrame>
                   <img
                     src="/oldindicateurs.PNG"
@@ -168,6 +176,7 @@ const ProfessionalsSituations = () => {
 
                 <Spacing spacing="2em" />
 
+                <SubTitle>3.2: Nouvelle version fonctionnelle des indicateurs Numérisk</SubTitle>
                 <ImageFrame>
                   <img
                     src="/indicateurnumerisk.PNG"
@@ -181,7 +190,7 @@ const ProfessionalsSituations = () => {
             <Spacing spacing="3em" />
 
             <SuperCard className="section4" ref={fourthSituation}>
-              <Title>Travailler en mode projet :</Title>
+              <Title>IV/ Travailler en mode projet :</Title>
               <Flex alignItemsCenter spaceAround>
                 <img
                   src="/trello_logo.PNG"
@@ -205,28 +214,35 @@ const ProfessionalsSituations = () => {
 
               <Spacing spacing="2em" />
 
+              <SubTitle>4.1: Interface du gestionnaire de projet Trello</SubTitle>
               <Flex>
                 <ImageFrame>
                   <img
                     src="/trelloscreen.PNG"
-                    alt="fusioninventory-img"
+                    alt="trello_screen"
                     width="100%"
                   />
                 </ImageFrame>
-                <LargeOl displayBackground>
-                  <li>Entretien avec le(s) client(s)</li><br/>
-                  <li>Mise en place d'un cahier des charges</li><br/>
-                  <li>Répartition du cahier des charges</li>
-                </LargeOl>
+                <PanelBackground flexColumn spaceAround>
+                  <LargeOl>
+                    <li>Entretien avec le(s) client(s)</li><br/>
+                    <li>Mise en place d'un cahier des charges</li><br/>
+                    <li>Répartition du cahier des charges</li>
+                  </LargeOl>
+                  <StyledButton startIcon={<BookIcon />} onClick={()=>window.open("../cahierdeschargesI.pdf", '_blank')}>
+                    Voir le cahier des charges
+                  </StyledButton>
+                </PanelBackground>
               </Flex>
 
               <Spacing spacing="2em" />
 
+              <SubTitle>4.2: Interface du gestionnaire de projet Notion</SubTitle>
               <Flex>
                 <ImageFrame>
                   <img
                     src="/screen_notion.PNG"
-                    alt="notion-screen"
+                    alt="notion_screen"
                     width="100%"
                   />
                 </ImageFrame>
@@ -234,6 +250,7 @@ const ProfessionalsSituations = () => {
 
               <Spacing spacing="2em" />
 
+              <SubTitle>4.3: Interface du gestionnaire de projet Azure Devops</SubTitle>
               <Flex>
                 <ImageFrame>
                   <img
@@ -249,9 +266,10 @@ const ProfessionalsSituations = () => {
 
             <SuperCard className="section5" ref={fifthSituation}>
               <Title>
-                Mettre à disposition des utilisateur un service informatique :
+                V/ Mettre à disposition des utilisateur un service informatique :
               </Title>
               <Flex flexColumn gap={2}>
+                <SubTitle>5.1: Interfaces d'inscription de l'application Cipecmeal</SubTitle>
                 <ImageFrame>
                   <img
                     src="/CipecmealStudentSign_in.png"
@@ -266,6 +284,7 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
+                <SubTitle>5.2: Interface de connexion de l'application Cipecmeal</SubTitle>
                 <ImageFrame>
                   <img
                     src="/CipecmealLogin.png"
@@ -273,6 +292,7 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
+                <SubTitle>5.3: Interface "Mon Compte" de l'application Cipecmeal</SubTitle>
                 <ImageFrame>
                   <img
                     src="/CipecmealMyAccount.png"
@@ -286,7 +306,7 @@ const ProfessionalsSituations = () => {
             <Spacing spacing="3em" />
 
             <SuperCard className="section6" ref={sixthSituation}>
-              <Title>Organiser son développement professionnel :</Title>
+              <Title>VI/ Organiser son développement professionnel :</Title>
               <ImageFrame>
                 <img
                   src="/plan_action.PNG"

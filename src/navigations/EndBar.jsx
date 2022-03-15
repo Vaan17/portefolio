@@ -28,7 +28,7 @@ const EndBar = () => {
   return (
     <SAppBar>
       <TextContainer>
-        AIMÉ Melvin ▪ Portefolio &emsp;&emsp; Retrouvez moi sur GitHub ▪{" "}
+        AIMÉ Melvin ▪ Portfolio &emsp;&emsp; Retrouvez moi sur GitHub ▪{" "}
         <A href="https://github.com/Vaan17" target="_blank" rel="noreferrer">
           https://github.com/Vaan17
         </A>
