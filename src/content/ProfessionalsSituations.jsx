@@ -165,7 +165,7 @@ const ProfessionalsSituations = () => {
             <SuperCard className="section3" ref={thirdSituation}>
               <Title>III/ Développer la présence en ligne de l'organisation :</Title>
               <Flex flexColumn>
-                <SubTitle>3.1: Ancienne version non-fonctionnelle des indicateurs Numérisk</SubTitle>
+                <SubTitle>3.1.1: Ancienne version non-fonctionnelle des indicateurs Numérisk</SubTitle>
                 <ImageFrame>
                   <img
                     src="/oldindicateurs.PNG"
@@ -176,7 +176,7 @@ const ProfessionalsSituations = () => {
 
                 <Spacing spacing="2em" />
 
-                <SubTitle>3.2: Nouvelle version fonctionnelle des indicateurs Numérisk</SubTitle>
+                <SubTitle>3.1.2: Nouvelle version fonctionnelle des indicateurs Numérisk</SubTitle>
                 <ImageFrame>
                   <img
                     src="/indicateurnumerisk.PNG"
@@ -184,6 +184,92 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.2.1: Mise en place d'une permission d'accès aux différents outils</SubTitle>
+                <Flex spaceAround>
+                  <ImageFrame width={"45%"}>
+                    <img
+                      src="/cartoPerm_true_appbar.PNG"
+                      alt="Outil carto accessible dans l'appbar"
+                      width="100%"
+                    />
+                  </ImageFrame>
+                  <ImageFrame width={"45%"}>
+                    <img
+                      src="/cartoPerm_false_appbar.PNG"
+                      alt="Outil carto inaccessible dans l'appbar"
+                      width="100%"
+                    />
+                  </ImageFrame>
+                </Flex>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.2.2: La restriction d'accès n'était pas complétement efficace</SubTitle>
+                <ImageFrame>
+                  <img
+                    src="/cartoPerm_false_unfixedUrl.PNG"
+                    alt="Outil carto inaccessible dans l'appbar"
+                    width="100%"
+                  />
+                </ImageFrame>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.2.3: La restriction d'accès est complétement efficace</SubTitle>
+                <ImageFrame>
+                  <img
+                    src="/cartoPerm_false_fixedUrl.PNG"
+                    alt="Outil carto accessible dans l'appbar"
+                    width="100%"
+                  />
+                </ImageFrame>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.3.1: Vue actuel de table recensant les différentes crises sur ordinateur</SubTitle>
+                <ImageFrame>
+                  <img
+                    src="/current_daybook_display.PNG"
+                    alt="SuperReactTable PC"
+                    width="100%"
+                  />
+                </ImageFrame>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.3.2: Vue mobile de la même table mais sur support mobile</SubTitle>
+                <Flex spaceAround>
+                  <ImageFrame width={"40%"}>
+                    <img
+                      src="/mobile_daybook_old.PNG"
+                      alt="SuperReactTable pas responsive sur mobile"
+                      width="100%"
+                    />
+                  </ImageFrame>
+                </Flex>
+
+                <Spacing spacing="2em" />
+
+                <SubTitle>3.3.3: Amélioration de la vue de la table sur mobile</SubTitle>
+                <Flex spaceAround>
+                  <ImageFrame width={"40%"}>
+                    <img
+                      src="/mobile_daybook_done.PNG"
+                      alt="SuperReactTable responsive sur mobile"
+                      width="100%"
+                    />
+                  </ImageFrame>
+                  <ImageFrame width={"40%"}>
+                    <img
+                      src="/mobile_daybook_done_bottom.PNG"
+                      alt="SuperReactTable responsive sur mobile (vue bottom)"
+                      width="100%"
+                    />
+                  </ImageFrame>
+                </Flex>
               </Flex>
             </SuperCard>
 
@@ -223,15 +309,12 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
-                <PanelBackground flexColumn spaceAround>
+                <PanelBackground flexColumn>
                   <LargeOl>
                     <li>Entretien avec le(s) client(s)</li><br/>
                     <li>Mise en place d'un cahier des charges</li><br/>
                     <li>Répartition du cahier des charges</li>
                   </LargeOl>
-                  <StyledButton startIcon={<BookIcon />} onClick={()=>window.open("../cahierdeschargesI.pdf", '_blank')}>
-                    Voir le cahier des charges
-                  </StyledButton>
                 </PanelBackground>
               </Flex>
 
@@ -260,6 +343,13 @@ const ProfessionalsSituations = () => {
                   />
                 </ImageFrame>
               </Flex>
+
+              <Spacing spacing="2em" />
+
+              <SubTitle>4.4: Cahier des charges réalisé avant la mise en production des indicateurs Numerisk</SubTitle>
+              <StyledButton startIcon={<BookIcon />} onClick={()=>window.open("../cahierdeschargesI.pdf", '_blank')}>
+                    Voir le cahier des charges
+                </StyledButton>
             </SuperCard>
 
             <Spacing spacing="3em" />
@@ -292,7 +382,15 @@ const ProfessionalsSituations = () => {
                     width="100%"
                   />
                 </ImageFrame>
-                <SubTitle>5.3: Interface "Mon Compte" de l'application Cipecmeal</SubTitle>
+                <SubTitle>5.3: Gestionnaire des comptes enregistrés (admin seulement)</SubTitle>
+                <ImageFrame>
+                  <img
+                    src="/cipecmeal_gestionnaire.png"
+                    alt="Login Utilisateur"
+                    width="100%"
+                  />
+                </ImageFrame>
+                <SubTitle>5.4: Interface "Mon Compte" de l'application Cipecmeal</SubTitle>
                 <ImageFrame>
                   <img
                     src="/CipecmealMyAccount.png"
