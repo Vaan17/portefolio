@@ -1,17 +1,81 @@
 import React from 'react'
 import {BoldText, Flex, ImageFrame, PageContent, Spacing, SuperCard, Title} from '../styledComponent/styledComponent'
 import styled from 'styled-components'
+import HomeIcon from '@mui/icons-material/Home'
+import MapIcon from '@mui/icons-material/Map'
+import PanToolIcon from '@mui/icons-material/PanTool'
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
+import PeopleIcon from '@mui/icons-material/People'
+import DescriptionIcon from '@mui/icons-material/Description'
 
 const SIframe = styled.iframe`
     /* =-=-=-=-= Default =-=-=-=-= */
-        border: 0;
+    border: 0;
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
+const ToolDiv = styled.div`
+    /* =-=-=-=-= Default =-=-=-=-= */
+    display: flex;
+    align-items: end;
+    font-size: 22px;
+    /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+`
+
+const Tools = [
+    {
+        name: "Accueil",
+        icon: <HomeIcon style={{width: "35px", height:"35px"}}/>
+    },
+    {
+        name: "Cartographie",
+        icon: <MapIcon style={{width: "35px", height:"35px"}}/>
+    },
+    {
+        name: "Main Courante",
+        icon: <PanToolIcon style={{width: "35px", height:"35px"}}/>
+    },
+    {
+        name: "Mes Données",
+        icon: <ContactPhoneIcon style={{width: "35px", height:"35px"}}/>
+    },
+    {
+        name: "Coopération",
+        icon: <PeopleIcon style={{width: "35px", height:"35px"}}/>
+    },
+    {
+        name: "Documents",
+        icon: <DescriptionIcon style={{width: "35px", height:"35px"}}/>
+    }
+]
 
 const NumeriskAndMe = () => {
 
     return(
         <PageContent>
+            <SuperCard>
+                <Title>L'application Numérisk un peu plus en détail :​</Title>
+                 
+                <Flex justifyCenter gap={10}>
+                    <img src="/numerisklogo.png" alt="Logo Numerisk" width="650px" />
+                    <Flex flexColumn>
+                        {Tools.map((tool, index) => {
+                            let isLastTool = false
+                            if(index === Tools.length - 1){
+                                isLastTool = true
+                            }
+                            return (
+                                <>
+                                    <ToolDiv>{tool.icon} &emsp; {tool.name}</ToolDiv>
+                                    {!isLastTool && <Spacing spacing="2em" />}
+                                </>
+                            )
+                        })}
+                    </Flex>
+                </Flex>
+            </SuperCard>
+
+            <Spacing spacing="3em" />
+
             <SuperCard>
                 <Title>Présentation de l'entreprise :</Title>
                     <Flex gap={5}>
@@ -78,7 +142,7 @@ const NumeriskAndMe = () => {
                         <img src="/TypeScript.png" alt="rubyonrails-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Framework Web</div>
-                        <div>(Front-end)</div>
+                        <div>(Langage syntaxique)</div>
                     </Flex>
                     <Flex flexColumn>
                         <img src="/vscode.png" alt="VisualStudioCode-img" width="280px" height="150px"/>

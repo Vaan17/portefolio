@@ -17,11 +17,10 @@ const SToolbar = styled(Toolbar)`
   justify-content: space-between;
 `;
 const SListItem = styled(ListItem)`
-  width: 11vw !important;
+  width: 15vw !important;
   display: flex;
   justify-content: center !important;
   align-items: center !important;
-  //padding: 8px 3em !important;
   cursor: pointer !important;
   &:hover {
     background-color: rgba(224, 251, 255, 0.2);
@@ -66,16 +65,8 @@ const Navbar = () => {
       path: "/numerisk_and_me",
     },
     {
-      name: "Situations Professionelles",
+      name: "Compétences Professionelles",
       path: "/professionals_situations",
-    },
-    {
-      name: "Approfondissement",
-      path: "/deepening",
-    },
-    {
-      name: "Annexes",
-      path: "/annexes",
     },
   ];
 

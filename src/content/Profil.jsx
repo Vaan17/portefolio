@@ -2,17 +2,18 @@ import { Avatar } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
 import {TinyText, BoldText, Title, Spacing, SuperCard, Flex, WidthlessPageContent} from '../styledComponent/styledComponent'
-import StarHalfIcon from '@mui/icons-material/StarHalf';
-import StarIcon from '@mui/icons-material/Star';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import StarHalfIcon from '@mui/icons-material/StarHalf'
+import StarIcon from '@mui/icons-material/Star'
+import StarOutlineIcon from '@mui/icons-material/StarOutline'
+
 const Star = styled(StarIcon)`
     font-size: 16px !important;
 `
 const StarHalf = styled(StarHalfIcon)`
-   font-size: 16px !important; 
+    font-size: 16px !important; 
 `
 const StarEmpty= styled(StarOutlineIcon)`
-font-size: 16px !important;
+    font-size: 16px !important;
 `
 const StyledImg = styled.img`
     transition: all 0.2s;
@@ -22,17 +23,17 @@ const StyledImg = styled.img`
 `
 const TopBanner = styled.div`
     /* =-=-=-=-= Default =-=-=-=-= */
-        margin: -2em -2em 0 -2em;
-        padding: 2em;
-        background-color: rgba(0, 97, 126, 0.85);
-        color: white;
+    margin: -2em -2em 0 -2em;
+    padding: 2em;
+    background-color: rgba(0, 97, 126, 0.85);
+    color: white;
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
 
 const BottomBanner = styled(TopBanner)`
     /* =-=-=-=-= Default =-=-=-=-= */
-        margin: 0 -2em -2em -2em;
-        height: 1em;
+    margin: 0 -2em -2em -2em;
+    height: 1em;
     /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
 
