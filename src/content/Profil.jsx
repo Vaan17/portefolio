@@ -68,27 +68,24 @@ const Profil = () => {
 
                 <Flex flexColumn>
                     <Title>Parcours pédagogique et diplômes :​</Title>
-                    <BoldText>- Collège Albert Camus​</BoldText>
+                    <BoldText>Diplôme : Baccalauréat Général et Technologique​</BoldText>
+                    <div>- Lycée Polyvalent Léonce Vieljeux​</div>
                     <div>17000, La Rochelle.​</div>
-                    <div>Diplôme : Brevet des collèges​</div>
                     ​
-                    <BoldText>- Lycée René-Josué Valin​</BoldText>
+                    <BoldText>Diplôme : Brevet des collèges​</BoldText>
+                    <div>- Collège Albert Camus​</div>
                     <div>17000, La Rochelle.​</div>
-                    <div>Diplôme : Aucun​</div>
                     ​
-                    <BoldText>- Lycée Polyvalent Léonce Vieljeux​</BoldText>
-                    <div>17000, La Rochelle.​</div>
-                    <div>Diplôme : Baccalauréat Général et Technologique​</div>
                 </Flex>
 
                 <Spacing spacing="3em"/>
 
                 <Flex flexColumn>
                     <Title>Expériences professionnelles :​</Title>
-                    <BoldText>- 2017 TRIBOFILM, Périgny ​</BoldText>
-                    <div>Poste occupé : Stagiaire en observation ( 1semaine )</div>​
-                    <BoldText>- 2020 NUMERISK, La Rochelle​</BoldText>
-                    <div>Poste occupé : Apprenti développeur en informatique ( 1an )</div>
+                    <BoldText>Poste occupé : Stagiaire en observation ( 1semaine )</BoldText>​
+                    <div>- 2017 TRIBOFILM, Périgny ​</div>
+                    <BoldText>Poste occupé : Apprenti développeur en informatique ( 1an )</BoldText>
+                    <div>- 2020 NUMERISK, La Rochelle​</div>
                 </Flex>
 
                 <Spacing spacing="3em"/>

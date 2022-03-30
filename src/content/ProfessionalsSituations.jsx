@@ -1,7 +1,7 @@
-import { Grid } from "@mui/material";
-import React, { useRef } from "react";
-import styled from "styled-components";
-import ScrollJump from "../styledComponent/ScrollJump";
+import { Grid, Tab, Tabs } from "@mui/material"
+import React, { useRef, useState } from "react"
+import styled from "styled-components"
+import ScrollJump from "../styledComponent/ScrollJump"
 import {
   Flex,
   ImageFrame,
@@ -11,8 +11,15 @@ import {
   SubTitle,
   SuperCard,
   Title,
-} from "../styledComponent/styledComponent";
-import BookIcon from '@mui/icons-material/Book';
+} from "../styledComponent/styledComponent"
+import BookIcon from '@mui/icons-material/Book'
+import TabPanel from "../components/TabPanel"
+import TableauSynthese from "./preuves_competences/TableauSynthese"
+import EngagementPro from "./preuves_competences/EngagementPro"
+import GestionnaireGlpi from "./preuves_competences/GestionnaireGlpi"
+import IndicateursNumerisk from "./preuves_competences/IndicateursNumerisk"
+import PermissionsNumerisk from "./preuves_competences/PermissionsNumerisk"
+import VueMobileNumerisk from "./preuves_competences/VueMobileNumerisk"
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
@@ -27,15 +34,30 @@ const PanelBackground = styled(Flex)`
     border-radius: 0 5% 5% 0;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `
+const StyledTabContainer = styled(Tabs)`
+  height: 100%;
+`
 
 const ProfessionalsSituations = () => {
-  const overviewTable = useRef(null);
-  const firstSituation = useRef(null);
-  const secondSituation = useRef(null);
-  const thirdSituation = useRef(null);
-  const fourthSituation = useRef(null);
-  const fifthSituation = useRef(null);
-  const sixthSituation = useRef(null);
+  const [currentTab, setCurrentTab] = useState(0)
+  const overviewTable = useRef(null)
+  const firstSituation = useRef(null)
+  const secondSituation = useRef(null)
+  const thirdSituation = useRef(null)
+  const fourthSituation = useRef(null)
+  const fifthSituation = useRef(null)
+  const sixthSituation = useRef(null)
+
+  const a11yProps = (index) => (
+    {
+      id: `vertical-tab-${index}`,
+      'aria-controls': `vertical-tabpanel-${index}`,
+    }
+  )
+
+  const handleChange = (_event, newTab) => {
+    setCurrentTab(newTab)
+  }
 
   const arrayOfRefs = [
     {
@@ -67,7 +89,59 @@ const ProfessionalsSituations = () => {
       anchor: sixthSituation,
       title: "Organiser son développement professionnel",
     },
-  ];
+  ]
+
+  return (
+    <PageContent noPadding>
+    <Flex fullHeight>
+      <StyledTabContainer
+        orientation="vertical"
+        variant="scrollable"
+        value={currentTab}
+        onChange={handleChange}
+        aria-label="Vertical tabs example"
+        sx={{ borderRight: 1, borderColor: 'divider' }}
+      >
+        <Tab label="Tableau de synthèse" {...a11yProps(0)} />
+        <Tab label="Gestionnaire GLPI" {...a11yProps(1)} />
+        <Tab label="Indicateurs Numérisk" {...a11yProps(2)} />
+        <Tab label="Système de permissions" {...a11yProps(3)} />
+        <Tab label="Vue mobile Numérisk" {...a11yProps(4)} />
+        <Tab label="Gestion des demandes" {...a11yProps(5)} />
+        <Tab label="Gestionnaires de projets" {...a11yProps(6)} />
+        <Tab label="Cipecmeal" {...a11yProps(7)} />
+        <Tab label="Engagement profesionnel" {...a11yProps(8)} />
+      </StyledTabContainer>
+      <TabPanel value={currentTab} index={0}>
+        <TableauSynthese />
+      </TabPanel>
+      <TabPanel value={currentTab} index={1}>
+        <GestionnaireGlpi />
+      </TabPanel>
+      <TabPanel value={currentTab} index={2}>
+        <IndicateursNumerisk />
+      </TabPanel>
+      <TabPanel value={currentTab} index={3}>
+        <PermissionsNumerisk />
+      </TabPanel>
+      <TabPanel value={currentTab} index={4}>
+        <VueMobileNumerisk />
+      </TabPanel>
+      <TabPanel value={currentTab} index={5}>
+        <div>uevrbrrrrrrrer</div>
+      </TabPanel>
+      <TabPanel value={currentTab} index={6}>
+        <div>uevrttttttt ber</div>
+      </TabPanel>
+      <TabPanel value={currentTab} index={7}>
+        <div>rvuiervubieriubvu</div>
+      </TabPanel>
+      <TabPanel value={currentTab} index={8}>
+        <EngagementPro />
+      </TabPanel>
+    </Flex>
+    </PageContent>
+  )
 
   return (
     <>
@@ -76,38 +150,10 @@ const ProfessionalsSituations = () => {
         <Grid container>
           <Grid item md={1}></Grid>
           <Grid item md={11}>
-            <SuperCard className="section0" ref={overviewTable}>
-              <Title>Tableau de sythèse :</Title>
-              <iframe
-                src="/Tableau de synthèse BTS SIO SLAM.pdf"
-                alt="tableau-synthèse"
-                height="1000px"
-                width="100%"
-              ></iframe>
-            </SuperCard>
 
             <Spacing spacing="3em" />
 
-            <SuperCard className="section1" ref={firstSituation}>
-              <Title>I/ Gérer le patrimoine informatique :</Title>
-              <Flex spaceAround>
-                <img src="/glpilogo.png" alt="glpi-img" width="25%" />
-                <img
-                  src="/fusioninventory.png"
-                  alt="fusioninventory-img"
-                  width="25%"
-                />
-              </Flex>
-              <SubTitle>1.1: Interface d'acceuil de GLPI</SubTitle>
-              <ImageFrame>
-                <img src="/glpiscreen.PNG" alt="glpiscreen-img" width="100%" />
-              </ImageFrame>
-                <Spacing spacing="2em" />
-              <SubTitle>1.2: Panneau des ordinateurs inventoriés sur le gestionnaire</SubTitle>
-              <ImageFrame>
-                <img src="/glpi_inventaire.PNG" alt="glpiscreen-img" width="100%" />
-              </ImageFrame>
-            </SuperCard>
+            
 
             <Spacing spacing="3em" />
 
@@ -403,16 +449,7 @@ const ProfessionalsSituations = () => {
 
             <Spacing spacing="3em" />
 
-            <SuperCard className="section6" ref={sixthSituation}>
-              <Title>VI/ Organiser son développement professionnel :</Title>
-              <ImageFrame>
-                <img
-                  src="/plan_action.PNG"
-                  alt="Plan d'action professionnel"
-                  width="100%"
-                />
-              </ImageFrame>
-            </SuperCard>
+            
           </Grid>
         </Grid>
       </PageContent>

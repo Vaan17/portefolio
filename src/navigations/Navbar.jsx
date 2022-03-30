@@ -17,7 +17,7 @@ const SToolbar = styled(Toolbar)`
   justify-content: space-between;
 `;
 const SListItem = styled(ListItem)`
-  width: 15vw !important;
+  width: 13vw !important;
   display: flex;
   justify-content: center !important;
   align-items: center !important;
@@ -38,12 +38,12 @@ const Separator = styled.div`
 `;
 const FollowingWhiteBar = styled.div`
   transition: all 0.2s;
-  width: 11vw;
+  width: 13vw;
   height: 3px;
   background-color: white;
   position: relative;
   left: 0;
-  margin-left: calc((11vw * var(--tab)) + (1px * var(--tab)));
+  margin-left: calc((13vw * var(--tab)) + (1px * var(--tab)));
   border-radius: 50px;
 `;
 const Navbar = () => {
@@ -65,7 +65,7 @@ const Navbar = () => {
       path: "/numerisk_and_me",
     },
     {
-      name: "Compétences Professionelles",
+      name: "Compétences Pro.",
       path: "/professionals_situations",
     },
   ];
