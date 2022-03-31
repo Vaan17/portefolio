@@ -21,18 +21,26 @@ export const PageContainer = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   width: 100%;
   height: 100%;
-  margin: 4em 0 !important;
+  margin: 4em 0 2em 0 !important;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 export const PageContent = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
-  padding: 3em 10em;
-  background-color: rgb(240, 240, 240);
-  /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
-`;
-export const WidthlessPageContent = styled(PageContent)`
-  /* =-=-=-=-= Default =-=-=-=-= */
-  padding: 3em 22vw;
+  ${({ widthless, extrawidth }) =>
+    (widthless || extrawidth) &&
+    widthless ?
+    css`
+      padding: 3em 22vw;
+    `
+    : extrawidth
+    ? css`
+      padding: 3em 3vw;
+    `
+    : css`
+      padding: 3em 10em;
+      `
+    }
+    background-color: rgb(240, 240, 240);
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 export const TinyText = styled.div`

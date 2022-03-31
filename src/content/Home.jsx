@@ -34,8 +34,10 @@ const Home = () => {
           <BoldText>Cipecma</BoldText>
           <Spacing spacing="1em" />
           <img
-            src="https://www.cipecma.com/templates/cipecma/images/logo.png"
+            src="logo_cipecma2.png"
             alt="Logo Cipecma"
+            width="200px"
+            height="200px"
           />
           <Spacing spacing="1em" />
           <AlignText>Avenue du Général de Gaulle,</AlignText>

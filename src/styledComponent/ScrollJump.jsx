@@ -32,10 +32,7 @@ const SIconButton = styled(IconButton)`
 const ScrollNavigation = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   position: fixed;
-  margin-left: 8em;
-  height: calc(
-    ${WINDOW_HEIGHT}px - ${NAVBAR_HEIGHT}em - ${ENDBAR_HEIGHT}em
-  );
+  height: calc(${WINDOW_HEIGHT}px - ${NAVBAR_HEIGHT}em - ${ENDBAR_HEIGHT}em);
   display: flex;
   justify-content: center;
   flex-direction: column;

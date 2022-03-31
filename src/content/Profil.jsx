@@ -1,7 +1,7 @@
 import { Avatar } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
-import {TinyText, BoldText, Title, Spacing, SuperCard, Flex, WidthlessPageContent} from '../styledComponent/styledComponent'
+import {TinyText, BoldText, Title, Spacing, SuperCard, Flex, PageContent} from '../styledComponent/styledComponent'
 import StarHalfIcon from '@mui/icons-material/StarHalf'
 import StarIcon from '@mui/icons-material/Star'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
@@ -40,7 +40,7 @@ const BottomBanner = styled(TopBanner)`
 const Profil = () => {
 
     return (
-        <WidthlessPageContent>
+        <PageContent widthless>
             <SuperCard>
                 <TopBanner>
                     <Flex spaceBetween alignItemsCenter>
@@ -134,7 +134,7 @@ const Profil = () => {
 
                 <BottomBanner />
             </SuperCard >
-        </WidthlessPageContent>
+        </PageContent>
     )
 }
 

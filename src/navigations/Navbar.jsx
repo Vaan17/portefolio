@@ -65,7 +65,7 @@ const Navbar = () => {
       path: "/numerisk_and_me",
     },
     {
-      name: "Compétences Pro.",
+      name: "Compétences",
       path: "/professionals_situations",
     },
   ];
@@ -74,9 +74,9 @@ const Navbar = () => {
     <SAppBar>
       <SToolbar>
         <img
-          src="https://www.cipecma.com/templates/cipecma/images/logo.png"
+          src="/logo_cipecma.jpg"
           alt="Logo Cipecma"
-          width="100px"
+          width="55px"
           height="55px"
         />
         <Header>
