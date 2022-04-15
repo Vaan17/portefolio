@@ -17,21 +17,18 @@ import GestionnairesProjets from "./preuves_competences/GestionnairesProjets"
 import ProjetCipecmeal from "./preuves_competences/ProjetCipecmeal"
 import { WINDOW_HEIGHT } from "../styledComponent/constants"
 
+const StyledPanelContainer = styled.div`
+  width: 100%;
+  margin-left: calc(18vw + 0.5em);
+`
 const StyledTabContainer = styled(Tabs)`
   width: 18vw !important;
   height: calc(${WINDOW_HEIGHT}px - 12em);
   position: fixed;
-  &: {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: red !important;
+  .MuiTabs-flexContainer {
+    height: 100% !important;
+    justify-content: space-between !important;
   }
-`
-const StyledPanelContainer = styled.div`
-  width: 100%;
-  margin-left: calc(18vw + 0.5em);
 `
 
 const ProfessionalsSituations = () => {

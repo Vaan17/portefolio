@@ -42,97 +42,104 @@ const Profil = () => {
     return (
         <PageContent widthless>
             <SuperCard>
-                <TopBanner>
-                    <Flex spaceBetween alignItemsCenter>
-                        <Flex flexColumn>
-                            <div>AIMÉ Melvin​</div>
-                            <div>19 ans​</div>
-                            <div>26 rue d'Yves, 17440 Aytré​</div>
-                            <div>Vaan17440@outlook.fr​</div>
-                            <div>Permis B​</div>
+                <Flex flexColumn gap={3}>
+                    <TopBanner>
+                        <Flex spaceBetween alignItemsCenter>
+                            <Flex flexColumn>
+                                <div>AIMÉ Melvin​</div>
+                                <div>19 ans​</div>
+                                <div>26 rue d'Yves, 17440 Aytré​</div>
+                                <div>Vaan17440@outlook.fr​</div>
+                                <div>Permis B​</div>
+                            </Flex>
+                            <Flex flexColumn alignItemsCenter>
+                                <BoldText>Alternant BTS SIO​</BoldText>
+                                <TinyText>
+                                    <div>Brevet de Technicien Supérieur</div>
+                                    <div>Services Informatiques aux Organisations</div>​
+                                </TinyText>
+                            </Flex>
+                            <Avatar sx={{ width: 150, height: 150 }}>
+                                <StyledImg src="/melvin-cv.png" alt="melvin-cv" height="200vh" />
+                            </Avatar>
                         </Flex>
-                        <Flex flexColumn alignItemsCenter>
-                            <BoldText>Alternant BTS SIO​</BoldText>
-                            <TinyText>
-                                <div>Brevet de Technicien Supérieur</div>
-                                <div>Services Informatiques aux Organisations</div>​
-                            </TinyText>
-                        </Flex>
-                        <Avatar sx={{ width: 150, height: 150 }}>
-                            <StyledImg src="/melvin-cv.png" alt="melvin-cv" height="200vh" />
-                        </Avatar>
+                    </TopBanner>
+
+                    <Flex flexColumn>
+                        <Title>Parcours pédagogique et diplômes :​</Title>
+                        <BoldText>Diplôme : Baccalauréat Général et Technologique​</BoldText>
+                        <div>- Lycée Polyvalent Léonce Vieljeux​</div>
+                        <div>17000, La Rochelle.​</div>
+                        ​
+                        <BoldText>Diplôme : Brevet des collèges​</BoldText>
+                        <div>- Collège Albert Camus​</div>
+                        <div>17000, La Rochelle.​</div>
+                        ​
                     </Flex>
-                </TopBanner>
 
-                <Spacing spacing="3em"/>
-
-                <Flex flexColumn>
-                    <Title>Parcours pédagogique et diplômes :​</Title>
-                    <BoldText>Diplôme : Baccalauréat Général et Technologique​</BoldText>
-                    <div>- Lycée Polyvalent Léonce Vieljeux​</div>
-                    <div>17000, La Rochelle.​</div>
-                    ​
-                    <BoldText>Diplôme : Brevet des collèges​</BoldText>
-                    <div>- Collège Albert Camus​</div>
-                    <div>17000, La Rochelle.​</div>
-                    ​
-                </Flex>
-
-                <Spacing spacing="3em"/>
-
-                <Flex flexColumn>
-                    <Title>Expériences professionnelles :​</Title>
-                    <BoldText>Poste occupé : Stagiaire en observation ( 1semaine )</BoldText>​
-                    <div>- 2017 TRIBOFILM, Périgny ​</div>
-                    <BoldText>Poste occupé : Apprenti développeur en informatique ( 1an )</BoldText>
-                    <div>- 2020 NUMERISK, La Rochelle​</div>
-                </Flex>
-
-                <Spacing spacing="3em"/>
-
-                <Flex flexColumn>
-                    <Title>Compétences :​</Title>
-                    <BoldText>Logiciels maîtrisés :</BoldText>
-                        <Spacing spacing="1em"/>
-                    <Flex gap={3}>
-                        <Flex flexColumn gap={.5}>
-                            <li>Word</li>
-                            <li>Visual Studio Code</li>
-                        </Flex>
-                        <Flex flexColumn gap={.5}>
-                            <li>GitHub</li>
-                            <li>Ubuntu Terminal</li>
-                        </Flex>
-                        <Flex flexColumn gap={.5}>
-                            <li>Wamp</li>
-                            <li>PhpMyAdmin</li>
+                    <Flex flexColumn>
+                        <Title>Expériences professionnelles :​</Title>
+                        <Flex flexColumn gap={1}>
+                            <div>
+                                <BoldText>Poste occupé : Apprenti développeur en informatique ( 1an )</BoldText>
+                                <div>- 2020 NUMERISK, La Rochelle​</div>
+                            </div>
+                            <div>
+                                <BoldText>Poste occupé : Stagiaire en observation ( 1semaine )</BoldText>
+                                <div>- 2017 TRIBOFILM, Périgny​</div>
+                            </div>
                         </Flex>
                     </Flex>
 
-                    <Spacing spacing="1em"/>
+                    <Flex flexColumn gap={1}>
+                        <Flex flexColumn gap={1}>
+                            <div>
+                                <Title>Compétences :​</Title>
+                                <BoldText>Logiciels maîtrisés :</BoldText>
+                            </div>
+                            <Flex gap={3}>
+                                <Flex flexColumn gap={.5}>
+                                    <li>Word</li>
+                                    <li>Visual Studio Code</li>
+                                </Flex>
+                                <Flex flexColumn gap={.5}>
+                                    <li>GitHub</li>
+                                    <li>Ubuntu Terminal</li>
+                                </Flex>
+                                <Flex flexColumn gap={.5}>
+                                    <li>Wamp</li>
+                                    <li>PhpMyAdmin</li>
+                                </Flex>
+                            </Flex>
+                        </Flex>
 
-                    <BoldText>Langages maîtrisés :​</BoldText>
-                        <Spacing spacing="1em"/>
-                    <Flex gap={3}>
-                        <Flex flexColumn gap={.5}>
-                            <li>HTML : <Star /><Star /><Star /><Star /><StarEmpty /></li>
-                            <li>PHP :  <Star /><Star /><Star /><StarEmpty /><StarEmpty /></li>
-                            <li>Android Kotlin :  <Star /><Star /><StarEmpty /><StarEmpty /><StarEmpty /></li>
+                        <Flex flexColumn gap={1}>
+                            <BoldText>Langages maîtrisés :​</BoldText>
+                            <Flex gap={3}>
+                                <Flex flexColumn gap={.5}>
+                                    <li>HTML : <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                                    <li>PHP :  <Star /><Star /><Star /><StarEmpty /><StarEmpty /></li>
+                                    <li>Android Kotlin :  <Star /><Star /><StarEmpty /><StarEmpty /><StarEmpty /></li>
+                                </Flex>
+                                <Flex flexColumn gap={.5}>
+                                    <li>CSS : <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                                    <li>ReactJS :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                                </Flex>
+                                <Flex flexColumn gap={.5}>
+                                    <li>Java Script :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
+                                    <li>RubyOnRails :  <Star /><Star /><Star /><StarHalf /><StarEmpty />​</li>
+                                </Flex>
+                            </Flex>
                         </Flex>
-                        <Flex flexColumn gap={.5}>
-                            <li>CSS : <Star /><Star /><Star /><Star /><StarEmpty /></li>
-                            <li>ReactJS :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
-                        </Flex>
-                        <Flex flexColumn gap={.5}>
-                            <li>Java Script :  <Star /><Star /><Star /><Star /><StarEmpty /></li>
-                            <li>RubyOnRails :  <Star /><Star /><Star /><StarHalf /><StarEmpty />​</li>
+
+                        <Flex flexColumn gap={1}>
+                            <BoldText>Langues :</BoldText>
+                            <li>Anglais : Niveau A2</li>
                         </Flex>
                     </Flex>
+
+                    <BottomBanner />
                 </Flex>
-
-                <Spacing spacing="3em"/>
-
-                <BottomBanner />
             </SuperCard >
         </PageContent>
     )

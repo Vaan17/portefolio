@@ -29,7 +29,6 @@ const GestionnaireGlpi = () => {
 
   return (
     <>  
-      <ScrollJump arrayOfRefs={arrayOfRefs} />
       <CardContainer>
         <SuperCard className="section1" ref={firstCard}>
           <Title>Gestionnaire de patrimoine informatique GLPI</Title>
