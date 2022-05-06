@@ -37,7 +37,7 @@ export const PageContent = styled.div`
       padding: 3em 3vw;
     `
     : css`
-      padding: 3em 10em;
+      padding: 4em 10em;
       `
     }
     background-color: rgb(240, 240, 240);

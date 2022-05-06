@@ -3,13 +3,11 @@ import {
   Flex,
   ImageFrame,
   Spacing,
-  StyledButton,
   SubTitle,
   SuperCard,
   Title,
 } from "../../styledComponent/styledComponent"
 import styled from "styled-components"
-import BookIcon from '@mui/icons-material/Book'
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
@@ -107,13 +105,6 @@ const GestionnairesProjets = () => {
                     />
                   </ImageFrame>
                 </Flex>
-
-                <Spacing spacing="2em" />
-
-                <SubTitle>4.4: Cahier des charges réalisé avant la mise en production des indicateurs Numerisk</SubTitle>
-                <StyledButton startIcon={<BookIcon />} onClick={()=>window.open("../cahierdeschargesI.pdf", '_blank')}>
-                    Voir le cahier des charges
-                </StyledButton>
             </SuperCard>
         </>
     )
