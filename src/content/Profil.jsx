@@ -5,6 +5,7 @@ import {TinyText, BoldText, Title, Spacing, SuperCard, Flex, PageContent} from '
 import StarHalfIcon from '@mui/icons-material/StarHalf'
 import StarIcon from '@mui/icons-material/Star'
 import StarOutlineIcon from '@mui/icons-material/StarOutline'
+import melvinCv from "../img/melvin-cv.png";
 
 const Star = styled(StarIcon)`
     font-size: 16px !important;
@@ -60,7 +61,7 @@ const Profil = () => {
                                 </TinyText>
                             </Flex>
                             <Avatar sx={{ width: 150, height: 150 }}>
-                                <StyledImg src="/melvin-cv.png" alt="melvin-cv" height="200vh" />
+                                <StyledImg src={melvinCv} alt="melvin.png" height="200vh" />
                             </Avatar>
                         </Flex>
                     </TopBanner>

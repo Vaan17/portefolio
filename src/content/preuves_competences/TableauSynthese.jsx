@@ -1,5 +1,6 @@
 import React from 'react'
 import { SuperCard, Title } from '../../styledComponent/styledComponent'
+import tableauSynthese from "../../img/Tableau de synthèse BTS SIO SLAM.pdf"
 
 const TableauSynthese = () => {
 
@@ -7,7 +8,7 @@ const TableauSynthese = () => {
         <SuperCard>
           <Title>Tableau de sythèse :</Title>
           <iframe
-            src="/Tableau de synthèse BTS SIO SLAM.pdf"
+            src={tableauSynthese}
             alt="tableau-synthèse"
             height="1000px"
             width="100%"

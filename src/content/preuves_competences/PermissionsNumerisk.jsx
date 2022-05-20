@@ -1,5 +1,9 @@
 import React, { useRef } from 'react'
-import { Flex, ImageFrame, Spacing, SubTitle, SuperCard, Title } from '../../styledComponent/styledComponent'
+import { Flex, ImageFrame, Spacing, SubTitle, SuperCard } from '../../styledComponent/styledComponent'
+import cartoPerm_true_appbar from "../../img/cartoPerm_true_appbar.PNG"
+import cartoPerm_false_appbar from "../../img/cartoPerm_false_appbar.PNG"
+import cartoPerm_false_unfixedUrl from "../../img/cartoPerm_false_unfixedUrl.PNG"
+import cartoPerm_false_fixedUrl from "../../img/cartoPerm_false_fixedUrl.PNG"
 
 const PermissionsNumerisk = () => {
     const firstCard = useRef(null)
@@ -13,14 +17,14 @@ const PermissionsNumerisk = () => {
                 <Flex spaceAround>
                   <ImageFrame width={"45%"}>
                     <img
-                      src="/cartoPerm_true_appbar.PNG"
+                      src={cartoPerm_true_appbar}
                       alt="Outil carto accessible dans l'appbar"
                       width="100%"
                     />
                   </ImageFrame>
                   <ImageFrame width={"45%"}>
                     <img
-                      src="/cartoPerm_false_appbar.PNG"
+                      src={cartoPerm_false_appbar}
                       alt="Outil carto inaccessible dans l'appbar"
                       width="100%"
                     />
@@ -34,7 +38,7 @@ const PermissionsNumerisk = () => {
                 <SubTitle>La restriction d'accès n'était pas complétement efficace</SubTitle>
                 <ImageFrame>
                   <img
-                    src="/cartoPerm_false_unfixedUrl.PNG"
+                    src={cartoPerm_false_unfixedUrl}
                     alt="Outil carto inaccessible dans l'appbar"
                     width="100%"
                   />
@@ -47,7 +51,7 @@ const PermissionsNumerisk = () => {
                 <SubTitle>La restriction d'accès est complétement efficace</SubTitle>
                 <ImageFrame>
                   <img
-                    src="/cartoPerm_false_fixedUrl.PNG"
+                    src={cartoPerm_false_fixedUrl}
                     alt="Outil carto accessible dans l'appbar"
                     width="100%"
                   />

@@ -7,6 +7,11 @@ import PanToolIcon from '@mui/icons-material/PanTool'
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
 import PeopleIcon from '@mui/icons-material/People'
 import DescriptionIcon from '@mui/icons-material/Description'
+import numerisklogo from "../img/numerisklogo.png"
+import reactjs from "../img/reactjs.jpg"
+import rubyonrails from "../img/rubyonrails.png"
+import TypeScript from "../img/TypeScript.png"
+import vscode from "../img/vscode.png"
 
 const SIframe = styled.iframe`
     /* =-=-=-=-= Default =-=-=-=-= */
@@ -56,7 +61,7 @@ const NumeriskAndMe = () => {
                 <Title>L'application Numérisk un peu plus en détail :​</Title>
                  
                 <Flex justifyCenter gap={10}>
-                    <img src="/numerisklogo.png" alt="Logo Numerisk" width="650px" />
+                    <img src={numerisklogo} alt="Logo Numerisk" width="650px" />
                     <Flex flexColumn>
                         {Tools.map((tool, index) => {
                             let isLastTool = false
@@ -124,13 +129,13 @@ const NumeriskAndMe = () => {
                     <Spacing spacing="1em" />
                 <Flex spaceAround>
                     <Flex flexColumn>
-                        <img src="/reactjs.jpg" alt="reactjs-img" width="280px" height="150px"/>
+                        <img src={reactjs} alt="reactjs-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Bibliothèque JavaScript</div>
                         <div>(Front-end)</div>
                     </Flex>
                     <Flex flexColumn>
-                        <img src="/rubyonrails.png" alt="rubyonrails-img" width="280px" height="150px"/>
+                        <img src={rubyonrails} alt="rubyonrails-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Framework Web</div>
                         <div>(Back-end)</div>
@@ -139,13 +144,13 @@ const NumeriskAndMe = () => {
                     <Spacing spacing="2em" />
                 <Flex spaceAround>
                     <Flex flexColumn>
-                        <img src="/TypeScript.png" alt="rubyonrails-img" width="280px" height="150px"/>
+                        <img src={TypeScript} alt="rubyonrails-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Framework Web</div>
                         <div>(Langage syntaxique)</div>
                     </Flex>
                     <Flex flexColumn>
-                        <img src="/vscode.png" alt="VisualStudioCode-img" width="280px" height="150px"/>
+                        <img src={vscode} alt="VisualStudioCode-img" width="280px" height="150px"/>
                             <Spacing spacing="1em" />
                         <div>Support de développement</div>
                         <div>(Éditeur de code)</div>

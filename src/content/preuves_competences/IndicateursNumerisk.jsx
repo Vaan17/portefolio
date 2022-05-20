@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import { Flex, ImageFrame, Spacing, SubTitle, SuperCard, Title } from '../../styledComponent/styledComponent'
+import oldindicateurs from "../../img/oldindicateurs.PNG"
+import indicateurnumerisk from "../../img/indicateurnumerisk.PNG"
 
 const IndicateursNumerisk = () => {
     const firstCard = useRef(null)
@@ -13,7 +15,7 @@ const IndicateursNumerisk = () => {
                     <SubTitle>3.1.1: Ancienne version non-fonctionnelle des indicateurs Numérisk</SubTitle>
                     <ImageFrame>
                       <img
-                        src="/oldindicateurs.PNG"
+                        src={oldindicateurs}
                         alt="anciens-indicateurs-numerisk"
                         width="100%"
                       />
@@ -27,7 +29,7 @@ const IndicateursNumerisk = () => {
                      <SubTitle>3.1.2: Nouvelle version fonctionnelle des indicateurs Numérisk</SubTitle>
                     <ImageFrame>
                       <img
-                        src="/indicateurnumerisk.PNG"
+                        src={indicateurnumerisk}
                         alt="indicateurs-numerisk-fini"
                         width="100%"
                       />

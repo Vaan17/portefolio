@@ -1,5 +1,9 @@
 import React, { useRef } from 'react'
-import { Flex, ImageFrame, Spacing, SubTitle, SuperCard, Title } from '../../styledComponent/styledComponent'
+import { Flex, ImageFrame, Spacing, SubTitle, SuperCard } from '../../styledComponent/styledComponent'
+import current_daybook_display from "../../img/current_daybook_display.PNG"
+import mobile_daybook_old from "../../img/mobile_daybook_old.PNG"
+import mobile_daybook_done from "../../img/mobile_daybook_done.PNG"
+import mobile_daybook_done_bottom from "../../img/mobile_daybook_done_bottom.PNG"
 
 const VueMobileNumerisk = () => {
     const firstCard = useRef(null)
@@ -12,7 +16,7 @@ const VueMobileNumerisk = () => {
                 <SubTitle>Vue actuel de table recensant les différentes crises sur ordinateur</SubTitle>
                 <ImageFrame>
                   <img
-                    src="/current_daybook_display.PNG"
+                    src={current_daybook_display}
                     alt="SuperReactTable PC"
                     width="100%"
                   />
@@ -26,7 +30,7 @@ const VueMobileNumerisk = () => {
                 <Flex spaceAround>
                   <ImageFrame width={"40%"}>
                     <img
-                      src="/mobile_daybook_old.PNG"
+                      src={mobile_daybook_old}
                       alt="SuperReactTable pas responsive sur mobile"
                       width="100%"
                     />
@@ -41,14 +45,14 @@ const VueMobileNumerisk = () => {
                 <Flex spaceAround>
                   <ImageFrame width={"40%"}>
                     <img
-                      src="/mobile_daybook_done.PNG"
+                      src={mobile_daybook_done}
                       alt="SuperReactTable responsive sur mobile"
                       width="100%"
                     />
                   </ImageFrame>
                   <ImageFrame width={"40%"}>
                     <img
-                      src="/mobile_daybook_done_bottom.PNG"
+                      src={mobile_daybook_done_bottom}
                       alt="SuperReactTable responsive sur mobile (vue bottom)"
                       width="100%"
                     />

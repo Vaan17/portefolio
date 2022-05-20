@@ -7,7 +7,7 @@ import moment from "moment";
 import styled from "styled-components";
 import ListItem from "@mui/material/ListItem";
 import { useHistory } from "react-router-dom";
-
+import imgLogo from "../img/logo_cipecma.jpg"
 const SAppBar = styled(AppBar)`
   height: 4em;
   background-image: linear-gradient(to right, #0d4073, #65a1dc) !important;
@@ -74,7 +74,7 @@ const Navbar = () => {
     <SAppBar>
       <SToolbar>
         <img
-          src="/logo_cipecma.jpg"
+          src={imgLogo}
           alt="Logo Cipecma"
           width="55px"
           height="55px"

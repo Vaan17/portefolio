@@ -6,6 +6,8 @@ import {
   Spacing,
   PageContent,
 } from "../styledComponent/styledComponent";
+import logo_cipecma2 from "../img/logo_cipecma2.png";
+
 const SGrid = styled(Grid)`
   display: flex;
   flex-direction: column !important;
@@ -34,7 +36,7 @@ const Home = () => {
           <BoldText>Cipecma</BoldText>
           <Spacing spacing="1em" />
           <img
-            src="logo_cipecma2.png"
+            src={logo_cipecma2}
             alt="Logo Cipecma"
             width="200px"
             height="200px"

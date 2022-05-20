@@ -8,6 +8,12 @@ import {
   Title,
 } from "../../styledComponent/styledComponent"
 import styled from "styled-components"
+import trello_logo from "../../img/trello_logo.PNG"
+import notion from "../../img/notion.png"
+import AzureDevops from "../../img/AzureDevops.png"
+import trelloscreen from "../../img/trelloscreen.PNG"
+import screen_notion from "../../img/screen_notion.PNG"
+import azure_screen from "../../img/azure_screen.PNG"
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
@@ -35,19 +41,19 @@ const GestionnairesProjets = () => {
               <Title>Utilisation d'outils de gestion de projets</Title>
               <Flex alignItemsCenter spaceAround>
                 <img
-                  src="/trello_logo.PNG"
+                  src={trello_logo}
                   alt="trello_logo"
                   width="25%"
                   height="25%"
                 />
                 <img
-                  src="/notion.png"
+                  src={notion}
                   alt="notion-img"
                   width="25%"
                   height="30%"
                 />
                 <img
-                  src="/AzureDevops.png"
+                  src={AzureDevops}
                   alt="AzureDevops-img"
                   width="20%"
                   height="30%"
@@ -62,7 +68,7 @@ const GestionnairesProjets = () => {
                 <Flex>
                   <ImageFrame>
                     <img
-                      src="/trelloscreen.PNG"
+                      src={trelloscreen}
                       alt="trello_screen"
                       width="100%"
                     />
@@ -84,7 +90,7 @@ const GestionnairesProjets = () => {
                 <Flex>
                   <ImageFrame>
                     <img
-                      src="/screen_notion.PNG"
+                      src={screen_notion}
                       alt="notion_screen"
                       width="100%"
                     />
@@ -99,7 +105,7 @@ const GestionnairesProjets = () => {
                 <Flex>
                   <ImageFrame>
                     <img
-                      src="/azure_screen.PNG"
+                      src={azure_screen}
                       alt="notion-screen"
                       width="100%"
                     />

@@ -9,6 +9,7 @@ import {
 } from "../../styledComponent/styledComponent"
 import styled from "styled-components"
 import BookIcon from '@mui/icons-material/Book'
+import cahierdeschargesI from "../../img/cahierdeschargesI.pdf"
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
@@ -59,7 +60,7 @@ const TraitementDemandes = () => {
           <Spacing spacing="2em" />
 
         <SubTitle>1.2: Cahier des charges réalisé avant la mise en production des indicateurs Numerisk</SubTitle>
-          <StyledButton startIcon={<BookIcon />} onClick={()=>window.open("../cahierdeschargesI.pdf", '_blank')}>
+          <StyledButton startIcon={<BookIcon />} onClick={()=>window.open(cahierdeschargesI, '_blank')}>
               Voir le cahier des charges
           </StyledButton>
       </SSuperCard>

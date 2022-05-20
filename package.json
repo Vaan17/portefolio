@@ -36,6 +36,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://slam.cipecma.net/2022/maime/portefolio/",
   "browserslist": {
     "production": [
       ">0.2%",
