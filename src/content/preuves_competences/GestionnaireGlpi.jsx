@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import ScrollJump from '../../styledComponent/ScrollJump'
+// import ScrollJump from '../../styledComponent/ScrollJump'
 import { Flex, ImageFrame, Spacing, SubTitle, SuperCard, Title } from '../../styledComponent/styledComponent'
 import styled from 'styled-components'
 import glpilogo from "../../img/glpilogo.png"
@@ -16,20 +16,20 @@ const GestionnaireGlpi = () => {
   const secondCard = useRef(null)
   const thirdCard = useRef(null)
 
-  const arrayOfRefs = [
-    {
-      anchor: firstCard,
-      title: "Gestionnaire de patrimoine informatique GLPI",
-    },
-    {
-      anchor: secondCard,
-      title: "Interface d'acceuil de GLPI",
-    },
-    {
-      anchor: thirdCard,
-      title: "Panneau des ordinateurs inventoriés sur le gestionnaire",
-    }
-  ]
+  // const arrayOfRefs = [
+  //   {
+  //     anchor: firstCard,
+  //     title: "Gestionnaire de patrimoine informatique GLPI",
+  //   },
+  //   {
+  //     anchor: secondCard,
+  //     title: "Interface d'acceuil de GLPI",
+  //   },
+  //   {
+  //     anchor: thirdCard,
+  //     title: "Panneau des ordinateurs inventoriés sur le gestionnaire",
+  //   }
+  // ]
 
   return (
     <>  

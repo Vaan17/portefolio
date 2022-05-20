@@ -24,20 +24,20 @@ const App = () => {
       <Navbar />
       <PageContainer>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/2022/maime/portefolio/home">
             <Home />
           </Route>
-          <Route exact path="/profil">
+          <Route exact path="/2022/maime/portefolio/profil">
             <Profil />
           </Route>
-          <Route exact path="/numerisk_and_me">
+          <Route exact path="/2022/maime/portefolio/numerisk_and_me">
             <NumeriskAndMe />
           </Route>
-          <Route exact path="/professionals_situations">
+          <Route exact path="/2022/maime/portefolio/professionals_situations">
             <ProfessionalsSituations />
           </Route>
           {/* When App is started, it display the page with url : /home */}
-          <Redirect to="/home" />
+          <Redirect to="/2022/maime/portefolio/home" />
         </Switch>
       </PageContainer>
       <EndBar />

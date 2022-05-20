@@ -1,7 +1,6 @@
 import "moment/locale/fr";
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import moment from "moment";
 import styled from "styled-components";
@@ -54,19 +53,19 @@ const Navbar = () => {
   const pages = [
     {
       name: "Accueil",
-      path: "/home",
+      path: "/2022/maime/portefolio/home",
     },
     {
       name: "Profil",
-      path: "/profil",
+      path: "/2022/maime/portefolio/profil",
     },
     {
       name: "L'Entreprise et Moi",
-      path: "/numerisk_and_me",
+      path: "/2022/maime/portefolio/numerisk_and_me",
     },
     {
       name: "Compétences",
-      path: "/professionals_situations",
+      path: "/2022/maime/portefolio/professionals_situations",
     },
   ];
 

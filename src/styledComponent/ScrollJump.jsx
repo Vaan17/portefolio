@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import {
   ENDBAR_HEIGHT,
   NAVBAR_HEIGHT,
-  PAGECONTENT_PADDING,
   WINDOW_HEIGHT,
 } from "./constants";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";

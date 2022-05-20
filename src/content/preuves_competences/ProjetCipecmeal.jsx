@@ -3,7 +3,6 @@ import {
   Flex,
   ImageFrame,
   Spacing,
-  StyledButton,
   SubTitle,
   SuperCard,
   Title,
