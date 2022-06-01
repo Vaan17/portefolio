@@ -12,10 +12,11 @@ const SAppBar = styled.div`
   align-items: center;
   position: fixed;
   bottom: 0;
-`
+  z-index: 10000;
+`;
 
 const EndBar = () => {
-  return <SAppBar />
-}
+  return <SAppBar />;
+};
 
-export default EndBar
+export default EndBar;

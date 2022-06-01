@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef } from "react";
 import {
   Flex,
   Spacing,
@@ -6,10 +6,10 @@ import {
   SubTitle,
   SuperCard,
   Title,
-} from "../../styledComponent/styledComponent"
-import styled from "styled-components"
-import BookIcon from '@mui/icons-material/Book'
-import cahierdeschargesI from "../../img/cahierdeschargesI.pdf"
+} from "../../styledComponent/styledComponent";
+import styled from "styled-components";
+import BookIcon from "@mui/icons-material/Book";
+import cahierdeschargesI from "../../img/cahierdeschargesI.pdf";
 
 const LargeOl = styled.ol`
   /* =-=-=-=-= Default =-=-=-=-= */
@@ -20,10 +20,10 @@ const LargeOl = styled.ol`
 `;
 const SSuperCard = styled(SuperCard)`
   height: calc(100vh - 16em);
-`
+`;
 
 const TraitementDemandes = () => {
-  const firstCard = useRef(null)
+  const firstCard = useRef(null);
 
   return (
     <>
@@ -37,35 +37,40 @@ const TraitementDemandes = () => {
             <li>
               Le client étant le gérant de l'entreprise prend contact avec moi.
             </li>
-              <br />
+            <br />
+            <li>Je relève les différentes demandes et contraintes.</li>
+            <br />
             <li>
-              Les différentes demandes et contraintes sont relevées.
+              Je met en place un cahier des charges pour l'organisation des
+              taches.
             </li>
-              <br />
+            <br />
+            <li>J'application les demandes au sein de l'application.</li>
+            <br />
+            <li>Je présente au client les travaux qui ont été réalisés.</li>
+            <br />
             <li>
-              Mise en place d'un cahier des charges pour l'organisation des taches.
-            </li>
-              <br />
-            <li>
-              Application des demandes au sein de l'application.
-            </li>
-              <br />
-            <li>
-              Création d'une demande de mise à jour de l'application comportant
-              les modifications.
+              Je crée une demande de mise à jour de l'application comportant mes
+              modifications.
             </li>
           </LargeOl>
         </Flex>
-          
-          <Spacing spacing="2em" />
 
-        <SubTitle>1.2: Cahier des charges réalisé avant la mise en production des indicateurs Numerisk</SubTitle>
-          <StyledButton startIcon={<BookIcon />} onClick={()=>window.open(cahierdeschargesI, '_blank')}>
-              Voir le cahier des charges
-          </StyledButton>
+        <Spacing spacing="2em" />
+
+        <SubTitle>
+          1.2: Cahier des charges réalisé avant la mise en production des
+          indicateurs Numerisk
+        </SubTitle>
+        <StyledButton
+          startIcon={<BookIcon />}
+          onClick={() => window.open(cahierdeschargesI, "_blank")}
+        >
+          Voir le cahier des charges
+        </StyledButton>
       </SSuperCard>
     </>
-  )
-}
+  );
+};
 
-export default TraitementDemandes
+export default TraitementDemandes;

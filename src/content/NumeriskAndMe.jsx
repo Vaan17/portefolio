@@ -5,6 +5,7 @@ import {
   ImageFrame,
   PageContent,
   Spacing,
+  SubTitle,
   SuperCard,
   Title,
 } from "../styledComponent/styledComponent";
@@ -68,7 +69,6 @@ const DescArea = styled.div`
   gap: 2em;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
-
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -76,20 +76,18 @@ const ImageContainer = styled.div`
 `;
 const Section = styled.div`
   opacity: 0.5;
-  :hover {
-    ${({ sectionId }) =>
-      sectionId &&
-      css`
-        #ImageArea :nth-child(${sectionId}) {
-          transform: scale(1.2);
-        }
-      `}
-    opacity: 1;
-    transition: all 0.3s;
-  }
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      opacity: 1;
+    `};
+  transition: all 0.3s;
 `;
 const CompactText = styled.div`
   width: 30em;
+`;
+const SFlex = styled(Flex)`
+  padding: 2em 0;
 `;
 
 const Tools = [
@@ -120,13 +118,13 @@ const Tools = [
 ];
 
 const NumeriskAndMe = () => {
-  const [currentIndexHover, setCurrentIndexHover] = useState(undefined);
+  const [currentIndexHover, setCurrentIndexHover] = useState(0);
   return (
     <PageContent>
       <SuperCard>
         <Title>L'application Numérisk un peu plus en détail :​</Title>
 
-        <Flex justifyCenter gap={10}>
+        <SFlex justifyCenter gap={10}>
           <img src={numerisklogo} alt="Logo Numerisk" width="650px" />
           <Flex flexColumn>
             {Tools.map((tool, index) => {
@@ -144,7 +142,7 @@ const NumeriskAndMe = () => {
               );
             })}
           </Flex>
-        </Flex>
+        </SFlex>
       </SuperCard>
 
       <Spacing spacing="3em" />
@@ -155,15 +153,15 @@ const NumeriskAndMe = () => {
           <ImageFrame>
             <SIframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d671.3559819581556!2d-1.1559088247104978!3d46.148501456785056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480153a9ac4e7ffb%3A0x99beb57145cdbbe6!2zTlVNw4lSSVNL!5e0!3m2!1sfr!2sfr!4v1635877929619!5m2!1sfr!2sfr"
-              width="700px"
-              height="100%"
+              width="600px"
+              height="400px"
               allowfullscreen=""
               loading="lazy"
             ></SIframe>
           </ImageFrame>
-          <Flex flexColumn>
+          <Flex flexColumn spaceAround>
             <Flex flexColumn>
-              <BoldText>Co-dirigeants :</BoldText>
+              <SubTitle>Co-dirigeants :</SubTitle>
               <div>HEYMES Paul</div>
               <div>FISCHER Amaury</div>
             </Flex>
@@ -171,7 +169,7 @@ const NumeriskAndMe = () => {
             <Spacing spacing="2em" />
 
             <Flex flexColumn>
-              <BoldText>Salariés :</BoldText>
+              <SubTitle>Salariés :</SubTitle>
               <div>THOMINE Alexis</div>
               <div>AIMÉ Melvin</div>
             </Flex>
@@ -179,24 +177,23 @@ const NumeriskAndMe = () => {
             <Spacing spacing="2em" />
 
             <Flex flexColumn>
-              <BoldText>Stagiaire :</BoldText>
+              <SubTitle>Stagiaires :</SubTitle>
               <div>Clément</div>
+              <div>Baptiste</div>
+              <div>Alexian</div>
             </Flex>
-
-            <Spacing spacing="2em" />
-
-            <Flex flexColumn>
-              <BoldText>Coordonnées :</BoldText>
-              <div>1 Rue Alexander Fleming​</div>
-              <div>17000 La Rochelle​</div>
-              <div>Téléphone : 06 33 01 80 38​</div>
-              <div>
-                Site WEB :{" "}
-                <a href="https://numerisk.fr" target="_blank" rel="noreferrer">
-                  https://numerisk.fr
-                </a>
-              </div>
-            </Flex>
+          </Flex>
+          <Flex flexColumn justifyCenter>
+            <SubTitle>Coordonnées :</SubTitle>
+            <div>1 Rue Alexander Fleming​</div>
+            <div>17000 La Rochelle​</div>
+            <div>Téléphone : 06 33 01 80 38​</div>
+            <div>
+              Site WEB :{" "}
+              <a href="https://numerisk.fr" target="_blank" rel="noreferrer">
+                https://numerisk.fr
+              </a>
+            </div>
           </Flex>
         </Flex>
       </SuperCard>
@@ -205,6 +202,71 @@ const NumeriskAndMe = () => {
 
       <SuperCard>
         <Title>Mon rôle au sein de l'entreprise : </Title>
+        <AnimatedArea>
+          <ImageContainer>
+            <StyledImage
+              src={frontEndImage}
+              alt="Image front end"
+              width="450px"
+              isActive={currentIndexHover === 0}
+            />
+            <StyledImage
+              src={backEndImage}
+              alt="Image back end"
+              width="450px"
+              isActive={currentIndexHover === 1}
+            />
+            <StyledImage
+              src={fullStackImage}
+              alt="Image full stack"
+              width="450px"
+              isActive={currentIndexHover === 2}
+            />
+          </ImageContainer>
+          <DescArea>
+            <Section
+              onMouseEnter={() => setCurrentIndexHover(0)}
+              isActive={currentIndexHover === 0}
+              // onMouseLeave={() => setCurrentIndexHover(undefined)}
+            >
+              <Title>Développeur Front-End</Title>
+              <CompactText>
+                Grace à l'HTML, CSS et JavaScript, le développeur est capable de
+                concevoir une page internet ou application qu’un utilisateur
+                peut voir et avec lesquelles il peut interagir directement.
+              </CompactText>
+            </Section>
+            <Section
+              onMouseEnter={() => setCurrentIndexHover(1)}
+              isActive={currentIndexHover === 1}
+              // onMouseLeave={() => setCurrentIndexHover(undefined)}
+            >
+              <Title>Développeur Back-End</Title>
+              <CompactText>
+                Å l'opposé du front-end qui lui est la partie visible de
+                l'iceberg, le dévéloppeur back-end est un terme désignant un
+                logiciel devant produire un résultat, ainsi, le développeur est
+                capable à la fois de gérer et d'administrer une base de données.
+              </CompactText>
+            </Section>
+            <Section
+              onMouseEnter={() => setCurrentIndexHover(2)}
+              isActive={currentIndexHover === 2}
+              // onMouseLeave={() => setCurrentIndexHover(undefined)}
+            >
+              <Title>Développeur Full-Stack</Title>
+              <CompactText>
+                Un développeur full stack, aussi appelé « développeur à tout
+                faire », est capable de réaliser la programmation d’un site ou
+                d'une application web, à la fois en front-end et en back-end.
+              </CompactText>
+            </Section>
+          </DescArea>
+        </AnimatedArea>
+
+        <Spacing spacing="3em" />
+
+        <Title>Les technologies utilisées : </Title>
         <Spacing spacing="1em" />
         <Flex spaceAround>
           <Flex flexColumn>
@@ -250,70 +312,6 @@ const NumeriskAndMe = () => {
             <div>(Éditeur de code)</div>
           </Flex>
         </Flex>
-      </SuperCard>
-
-      <Spacing spacing="3em" />
-
-      <SuperCard>
-        <Title>Terminalogies du développeur : </Title>
-        <AnimatedArea>
-          <ImageContainer>
-            <StyledImage
-              src={frontEndImage}
-              alt="Image front end"
-              width="450px"
-              isActive={currentIndexHover === 0}
-            />
-            <StyledImage
-              src={backEndImage}
-              alt="Image back end"
-              width="450px"
-              isActive={currentIndexHover === 1}
-            />
-            <StyledImage
-              src={fullStackImage}
-              alt="Image full stack"
-              width="450px"
-              isActive={currentIndexHover === 2}
-            />
-          </ImageContainer>
-          <DescArea>
-            <Section
-              onMouseEnter={() => setCurrentIndexHover(0)}
-              onMouseLeave={() => setCurrentIndexHover(undefined)}
-            >
-              <Title>Développeur Front-End</Title>
-              <CompactText>
-                Grace à l'HTML, CSS et JavaScript, le développeur est capable de
-                concevoir une page internet ou application qu’un utilisateur
-                peut voir et avec lesquelles il peut interagir directement.
-              </CompactText>
-            </Section>
-            <Section
-              onMouseEnter={() => setCurrentIndexHover(1)}
-              onMouseLeave={() => setCurrentIndexHover(undefined)}
-            >
-              <Title>Développeur Back-End</Title>
-              <CompactText>
-                Å l'opposé du front-end qui lui est la partie visible de
-                l'iceberg, le dévéloppeur back-end est un terme désignant un
-                logiciel devant produire un résultat, ainsi, le développeur est
-                capable à la fois de gérer et d'administrer une base de données.
-              </CompactText>
-            </Section>
-            <Section
-              onMouseEnter={() => setCurrentIndexHover(2)}
-              onMouseLeave={() => setCurrentIndexHover(undefined)}
-            >
-              <Title>Développeur Full-Stack</Title>
-              <CompactText>
-                Un développeur full stack, aussi appelé « développeur à tout
-                faire », est capable de réaliser la programmation d’un site ou
-                d'une application web, à la fois en front-end et en back-end.
-              </CompactText>
-            </Section>
-          </DescArea>
-        </AnimatedArea>
       </SuperCard>
     </PageContent>
   );
