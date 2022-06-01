@@ -71,7 +71,6 @@ const Navbar = () => {
 
   useEffect(() => {
     // Initialisation
-    debugger;
     const pathToIndex = {
       "/2022/maime/portefolio/home": 0,
       "/2022/maime/portefolio/profil": 1,
