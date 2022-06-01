@@ -20,9 +20,9 @@ import reactjs from "../img/reactjs.jpg";
 import rubyonrails from "../img/rubyonrails.png";
 import TypeScript from "../img/TypeScript.png";
 import vscode from "../img/vscode.png";
-import frontEndImage from "../img/frontEndImage.jfif";
-import backEndImage from "../img/backEndImage.jfif";
-import fullStackImage from "../img/fullStackImage.jfif";
+import frontEndImage from "../img/frontEndImage.jpg";
+import backEndImage from "../img/backEndImage.jpg";
+import fullStackImage from "../img/fullStackImage.jpg";
 import { css } from "styled-components";
 
 const SIframe = styled.iframe`
@@ -40,8 +40,9 @@ const ToolDiv = styled.div`
 const AnimatedArea = styled.div`
   /* =-=-=-=-= Default =-=-=-=-= */
   display: flex;
-  justify-content: space-between;
-  padding: 3em 10em;
+  justify-content: space-around;
+  padding: 2em;
+  padding-bottom: 5em;
   /* =-=-=-=-=-=-=-=-=-=-=-=-=-= */
 `;
 const StyledImage = styled.img`

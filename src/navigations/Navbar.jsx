@@ -1,12 +1,12 @@
 import "moment/locale/fr";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import moment from "moment";
 import styled from "styled-components";
 import ListItem from "@mui/material/ListItem";
 import { useHistory } from "react-router-dom";
-import imgLogo from "../img/logo_cipecma.jpg"
+import imgLogo from "../img/logo_cipecma.jpg";
 const SAppBar = styled(AppBar)`
   height: 4em;
   background-image: linear-gradient(to right, #0d4073, #65a1dc) !important;
@@ -69,15 +69,22 @@ const Navbar = () => {
     },
   ];
 
+  useEffect(() => {
+    // Initialisation
+    debugger;
+    const pathToIndex = {
+      "/2022/maime/portefolio/home": 0,
+      "/2022/maime/portefolio/profil": 1,
+      "/2022/maime/portefolio/numerisk_and_me": 2,
+      "/2022/maime/portefolio/professionals_situations": 3,
+    };
+    setLastTabSelectedIndex(pathToIndex[window.location.pathname]);
+  }, []);
+
   return (
     <SAppBar>
       <SToolbar>
-        <img
-          src={imgLogo}
-          alt="Logo Cipecma"
-          width="55px"
-          height="55px"
-        />
+        <img src={imgLogo} alt="Logo Cipecma" width="55px" height="55px" />
         <Header>
           <ListContainer>
             {pages.map((page, index) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PageContainer } from "./styledComponent/styledComponent";
 import Navbar from "./navigations/Navbar";
 import EndBar from "./navigations/EndBar";
@@ -18,6 +18,26 @@ import ProfessionalsSituations from "./content/ProfessionalsSituations";
 
 const App = () => {
   const history = createBrowserHistory();
+
+  // useEffect(() => {
+  //   debugger;
+  //   switch (window.location.pathname) {
+  //     case "/2022/maime/portefolio/home":
+  //       return history.push("/2022/maime/portefolio/home");
+  //     case "/2022/maime/portefolio/profil":
+  //       return history.push("/2022/maime/portefolio/profil");
+  //     case "/2022/maime/portefolio/numerisk_and_me":
+  //       return history.push("/2022/maime/portefolio/numerisk_and_me");
+  //     case "/2022/maime/portefolio/professionals_situations":
+  //       return history.push("/2022/maime/portefolio/professionals_situations");
+  //     default:
+  //       return history.push("/2022/maime/portefolio/home");
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    history.push(window.location.pathname);
+  });
 
   return (
     <Router history={history}>
